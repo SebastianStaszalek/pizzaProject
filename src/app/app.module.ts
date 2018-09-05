@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { DishesListComponent } from './dishes-list/dishes-list.component';
+import { DishDetailsComponent } from './dish-details/dish-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DishesListComponent
+    DishesListComponent,
+    DishDetailsComponent
   ],
   imports: [
     BrowserModule,
