@@ -18,10 +18,10 @@
     },
     {
       "id": 3,
-      "name": "Kebeb w bułce",
+      "name": "Pizza Salami Piccante",
       "isAvailable": true,
-      "description": "Chrupiąca bułka z dodatkiem kebabu drobiowego, kapusty pekińskiej, pomidora, ogórka zielonego",
-      "type": "fastfood",
+      "description": "Sos, ser, salami piccante",
+      "type": "pizza",
       "price": "13.90"
     },
     {
@@ -29,7 +29,7 @@
       "name": "Spagetti Bolognese",
       "isAvailable": false,
       "description": "Sos boloński",
-      "type": "spagetti",
+      "type": "pasta",
       "price": "14"
     },
     {
@@ -37,7 +37,23 @@
       "name": "Spagetti Siciliana",
       "isAvailable": true,
       "description": "Sos boloński z szynką i kukurydzą",
-      "type": "spagetti",
+      "type": "pasta",
+      "price": "17.50"
+    },
+    {
+      "id": 6,
+      "name": "Coca-cola",
+      "isAvailable": true,
+      "description": "",
+      "type": "beverage",
+      "price": "17.50"
+    },
+    {
+      "id": 7,
+      "name": "Cisowianka Perlage",
+      "isAvailable": true,
+      "description": "woda delikatnie musujaca",
+      "type": "beverage",
       "price": "17.50"
     }
   ],

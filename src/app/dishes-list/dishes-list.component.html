@@ -1,6 +1,22 @@
-<h2>My Heroes</h2>
-<ul class="dishes">
-  <li>
-    <span class="badge">{{}}</span> {{}}
-  </li>
-</ul>
+<h2>Dishes</h2>
+
+<section class="menu">
+  <div>
+    <button class="button" (click)="getPizza()">Pizza</button>
+  </div>
+  <div>
+    <button class="button" (click)="getPasta()">Makarony</button>
+  </div>
+  <div>
+    <button class="button" (click)="getBeverage()">Napoje</button>
+  </div>
+
+  <ul class="dishes">
+    <li *ngFor="let dish of dishes">
+      <span class="badge">{{dish.name}}</span> {{dish.price}}
+    </li>
+  </ul>
+</section>
+
+
+
