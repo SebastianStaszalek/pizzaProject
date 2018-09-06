@@ -5,6 +5,6 @@ export interface Dish {
   name: string;
   isAvailable: boolean;
   description: string;
-  type: typeof DishType;
+  type: DishType;
   price: number;
 }

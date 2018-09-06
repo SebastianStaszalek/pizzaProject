@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DishesService} from '../dishes.service';
 import {Dish} from '../model/dish.model';
 import {Subscription} from 'rxjs';
+import {OrderBasketService} from '../order-basket.service';
 
 @Component({
   selector: 'app-dishes-list',
@@ -13,11 +14,16 @@ export class DishesListComponent implements OnInit, OnDestroy {
   sub: Subscription;
 
   constructor(
-    readonly service: DishesService
+    readonly service: DishesService,
+    readonly orderService: OrderBasketService
   ) { }
 
   ngOnInit(): void {
     this.getPizza();
+  }
+
+  addDishToOrder(dish: Dish) {
+    this.orderService.addDishToBasket(dish);
   }
 
   getDishes(): void {

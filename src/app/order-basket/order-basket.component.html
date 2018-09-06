@@ -1,0 +1,7 @@
+Koszyk2
+<ul class="dishes">
+  <li *ngFor="let dish of service.getBasketPositions()">
+    <span class="badge">{{dish.name}}</span> {{dish.price}}
+    <button class="button" (click)="service.removeDishFromBasket(dish)">-</button>
+  </li>
+</ul>

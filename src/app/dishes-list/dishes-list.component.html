@@ -14,8 +14,11 @@
   <ul class="dishes">
     <li *ngFor="let dish of dishes">
       <span class="badge">{{dish.name}}</span> {{dish.price}}
+      <button class="button" (click)="addDishToOrder(dish)">+</button>
     </li>
   </ul>
+
+  <app-order-basket></app-order-basket>
 </section>
 
 
