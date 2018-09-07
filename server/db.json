@@ -55,6 +55,14 @@
       "description": "woda delikatnie musujaca",
       "type": "beverage",
       "price": "17.50"
+    },
+    {
+      "id": 8,
+      "name": "Pizza Prosciutto",
+      "isAvailable": false,
+      "description": "Sos, ser, prosciutto, rukola",
+      "type": "pizza",
+      "price": "13.90"
     }
   ],
   "orders": [

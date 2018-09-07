@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Dish} from './model/dish.model';
+import {filter, map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,19 +14,23 @@ export class DishesService {
   ) {}
 
   getDishes(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes');
+    return this.http.get<Dish[]>('/api/dishes')
+      .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
 
   getPizza(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes/?type=pizza');
+    return this.http.get<Dish[]>('/api/dishes/?type=pizza')
+      .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
 
   getPasta(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes/?type=pasta');
+    return this.http.get<Dish[]>('/api/dishes/?type=pasta')
+      .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
 
   getBeverage(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes/?type=beverage');
+    return this.http.get<Dish[]>('/api/dishes/?type=beverage')
+      .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
 
   getDish(id: number): Observable<Dish> {
