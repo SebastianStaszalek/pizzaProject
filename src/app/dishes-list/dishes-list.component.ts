@@ -3,6 +3,7 @@ import {DishesService} from '../dishes.service';
 import {Dish} from '../model/dish.model';
 import {Subscription} from 'rxjs';
 import {OrderBasketService} from '../order-basket.service';
+import {BasketDish} from '../model/basket-dish.model';
 
 @Component({
   selector: 'app-dishes-list',
@@ -23,7 +24,7 @@ export class DishesListComponent implements OnInit, OnDestroy {
   }
 
   addDishToOrder(dish: Dish) {
-    this.orderService.addDishToBasket(dish);
+    this.orderService.addDishToBasket(<BasketDish>dish);
   }
 
   getDishes(): void {

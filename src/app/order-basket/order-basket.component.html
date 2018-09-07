@@ -1,9 +1,11 @@
-Koszyk2
+Koszyk
 <ul class="dishes">
   <li *ngFor="let dish of service.getBasketPositions()">
-    <span class="badge">{{dish.name}}</span> {{dish.price}}
+    <span class="badge">{{dish.name}}</span> {{dish.price}} {{dish.counter}}
     <button class="button" (click)="service.removeDishFromBasket(dish)">-</button>
   </li>
 </ul>
 <br>
 <a>Razem: {{service.getBasketCost()}}</a>
+<br>
+<button class="button">Zamowienie</button>

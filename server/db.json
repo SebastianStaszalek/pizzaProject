@@ -27,7 +27,7 @@
     {
       "id": 4,
       "name": "Spagetti Bolognese",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos boloński",
       "type": "pasta",
       "price": "14"
