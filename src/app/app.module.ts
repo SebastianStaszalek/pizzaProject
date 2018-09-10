@@ -9,18 +9,22 @@ import { DishesListComponent } from './dishes-list/dishes-list.component';
 import { DishDetailsComponent } from './dish-details/dish-details.component';
 import {HttpClientModule} from '@angular/common/http';
 import { OrderBasketComponent } from './order-basket/order-basket.component';
+import { OrderComponent } from './order/order.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DishesListComponent,
     DishDetailsComponent,
-    OrderBasketComponent
+    OrderBasketComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

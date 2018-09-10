@@ -68,7 +68,22 @@
   "orders": [
     {
       "id": 1,
-      "dishIds": [1, 5]
+      "dishIds": [
+        1,
+        5
+      ]
+    },
+    {
+      "firstName": "sd",
+      "lastName": "wdwd",
+      "phoneNumber": 4545,
+      "eMail": "sds@dr.pl",
+      "city": "sdf",
+      "street": "wdfd",
+      "buildingNumber": "23",
+      "apartmentNumber": "44",
+      "dishIds": [],
+      "id": 2
     }
   ],
   "users": [
