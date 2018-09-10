@@ -67,25 +67,6 @@
   ],
   "orders": [
     {
-      "id": 1,
-      "dishIds": [
-        1,
-        5
-      ]
-    },
-    {
-      "firstName": "sd",
-      "lastName": "wdwd",
-      "phoneNumber": 4545,
-      "eMail": "sds@dr.pl",
-      "city": "sdf",
-      "street": "wdfd",
-      "buildingNumber": "23",
-      "apartmentNumber": "44",
-      "dishIds": [],
-      "id": 2
-    },
-    {
       "firstName": "seb",
       "lastName": "st",
       "phoneNumber": 4560496,
@@ -99,19 +80,26 @@
         2,
         3
       ],
-      "id": 3
+      "id": 1
     },
     {
-      "firstName": "df",
-      "lastName": "eff",
-      "phoneNumber": 467656,
-      "eMail": "df@wp.pl",
-      "city": "dfgsf",
-      "street": "dsfg",
+      "firstName": "alan",
+      "lastName": "sdsd",
+      "phoneNumber": 455454,
+      "eMail": "ss@onet.pl",
+      "city": "deff",
+      "street": "efesfe",
       "buildingNumber": "34",
-      "apartmentNumber": "23",
-      "dishIds": {},
-      "id": 4
+      "apartmentNumber": "2",
+      "dishIds": [
+        5,
+        6,
+        1,
+        2,
+        3
+      ],
+      "date": "2018-09-10T21:08:50.719Z",
+      "id": 2
     }
   ],
   "users": [

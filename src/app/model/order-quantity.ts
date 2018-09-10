@@ -1,4 +1,4 @@
-export interface OrderQuantity {
+export class OrderQuantity {
   dishId: number;
   quantity: number;
 }
