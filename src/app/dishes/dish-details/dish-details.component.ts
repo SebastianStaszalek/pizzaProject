@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Dish} from '../model/dish.model';
+import {Dish} from '../../model/dish.model';
 import {ActivatedRoute} from '@angular/router';
 import {DishesService} from '../dishes.service';
 

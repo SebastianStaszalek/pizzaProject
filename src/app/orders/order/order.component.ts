@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
-import {Order} from '../model/order.model';
+import {Order} from '../../model/order.model';
 import {OrderService} from '../order.service';
 import {OrderBasketService} from '../order-basket.service';
-import {BasketDish} from '../model/basket-dish.model';
-import {OrderStatus} from '../model/enum/order-status.enum';
+import {BasketDish} from '../../model/basket-dish.model';
+import {OrderStatus} from '../../model/enum/order-status.enum';
 import {Router} from '@angular/router';
 
 @Component({

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Dish} from './model/dish.model';
+import {Dish} from '../model/dish.model';
 import {filter, map} from 'rxjs/operators';
 
 @Injectable({

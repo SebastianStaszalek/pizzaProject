@@ -1,0 +1,13 @@
+<h2>Orders list</h2>
+
+<section class="menu">
+
+  <ul class="dishes">
+    <li *ngFor="let order of orders">
+      <span class="badge">{{order.id}}</span> {{order.street}} {{order.status}} {{order.date}}
+      <button class="button" routerLink="/dashboard-order-details/{{order.id}}">Podglad</button>
+    </li>
+  </ul>
+
+</section>
+<a routerLink="/">Powrot</a>

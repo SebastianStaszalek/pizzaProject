@@ -5,15 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { DishesListComponent } from './dishes-list/dishes-list.component';
-import { DishDetailsComponent } from './dish-details/dish-details.component';
+import { DishesListComponent } from './dishes/dishes-list/dishes-list.component';
+import { DishDetailsComponent } from './dishes/dish-details/dish-details.component';
 import {HttpClientModule} from '@angular/common/http';
-import { OrderBasketComponent } from './order-basket/order-basket.component';
-import { OrderComponent } from './order/order.component';
+import { OrderBasketComponent } from './orders/order-basket/order-basket.component';
+import { OrderComponent } from './orders/order/order.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { OrderInfoComponent } from './order-info/order-info.component';
-import { DashboardDishesListComponent } from './dashboard-dishes-list/dashboard-dishes-list.component';
-import { DashboardDishDetailsComponent } from './dashboard-dish-details/dashboard-dish-details.component';
+import { OrderInfoComponent } from './orders/order-info/order-info.component';
+import { DashboardDishesListComponent } from './dashboard/dashboard-dishes-list/dashboard-dishes-list.component';
+import { DashboardDishDetailsComponent } from './dashboard/dashboard-dish-details/dashboard-dish-details.component';
+import { DashboardOrdersListComponent } from './dashboard/dashboard-orders-list/dashboard-orders-list.component';
+import { DashboardOrderDetailsComponent } from './dashboard/dashboard-order-details/dashboard-order-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { DashboardDishDetailsComponent } from './dashboard-dish-details/dashboar
     OrderComponent,
     OrderInfoComponent,
     DashboardDishesListComponent,
-    DashboardDishDetailsComponent
+    DashboardDishDetailsComponent,
+    DashboardOrdersListComponent,
+    DashboardOrderDetailsComponent
   ],
   imports: [
     BrowserModule,

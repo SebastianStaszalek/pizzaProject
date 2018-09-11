@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Dish} from '../model/dish.model';
+import {Dish} from '../../model/dish.model';
 import {OrderBasketService} from '../order-basket.service';
 
 @Component({

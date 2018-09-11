@@ -1,0 +1,13 @@
+<h2>Dishes list</h2>
+
+<section class="menu">
+
+  <ul class="dishes">
+    <li *ngFor="let dish of dishes">
+      <span class="badge">{{dish.id}}</span> {{dish.name}} {{dish.type}} {{dish.isAvailable}}
+      <button class="button" routerLink="/dashboard-dish-details/{{dish.id}}">Podglad</button>
+    </li>
+  </ul>
+
+</section>
+<a routerLink="/">Powrot</a>

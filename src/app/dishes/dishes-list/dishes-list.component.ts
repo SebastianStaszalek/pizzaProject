@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DishesService} from '../dishes.service';
-import {Dish} from '../model/dish.model';
+import {Dish} from '../../model/dish.model';
 import {Subscription} from 'rxjs';
-import {OrderBasketService} from '../order-basket.service';
-import {BasketDish} from '../model/basket-dish.model';
+import {OrderBasketService} from '../../orders/order-basket.service';
+import {BasketDish} from '../../model/basket-dish.model';
 
 @Component({
   selector: 'app-dishes-list',
