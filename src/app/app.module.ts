@@ -12,6 +12,8 @@ import { OrderBasketComponent } from './order-basket/order-basket.component';
 import { OrderComponent } from './order/order.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { OrderInfoComponent } from './order-info/order-info.component';
+import { DashboardDishesListComponent } from './dashboard-dishes-list/dashboard-dishes-list.component';
+import { DashboardDishDetailsComponent } from './dashboard-dish-details/dashboard-dish-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { OrderInfoComponent } from './order-info/order-info.component';
     DishDetailsComponent,
     OrderBasketComponent,
     OrderComponent,
-    OrderInfoComponent
+    OrderInfoComponent,
+    DashboardDishesListComponent,
+    DashboardDishDetailsComponent
   ],
   imports: [
     BrowserModule,

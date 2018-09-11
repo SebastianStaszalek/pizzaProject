@@ -27,11 +27,6 @@ export class DishesListComponent implements OnInit, OnDestroy {
     this.orderService.addDishToBasket(<BasketDish>dish);
   }
 
-  getDishes(): void {
-    this.sub = this.service.getDishes()
-      .subscribe(dishes => this.dishes = dishes);
-  }
-
   getPizza(): void {
     this.sub = this.service.getPizza()
       .subscribe(pizza => this.dishes = pizza);

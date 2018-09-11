@@ -5,7 +5,7 @@ import {Order} from '../model/order.model';
 import {OrderService} from '../order.service';
 import {OrderBasketService} from '../order-basket.service';
 import {BasketDish} from '../model/basket-dish.model';
-import {OrderStatus} from '../model/order-status.enum';
+import {OrderStatus} from '../model/enum/order-status.enum';
 import {Router} from '@angular/router';
 
 @Component({

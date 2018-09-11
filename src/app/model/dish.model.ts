@@ -1,4 +1,4 @@
-import {DishType} from './dish-type.enum';
+import {DishType} from './enum/dish-type.enum';
 
 export interface Dish {
   id: number;
