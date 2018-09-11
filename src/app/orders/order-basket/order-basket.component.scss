@@ -1,0 +1,34 @@
+li{
+  list-style: none;
+  display:flex;
+  width:100%;
+  height: 8vh;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.dishes{
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+}
+
+.button{
+  width: 20px;
+
+  height: 20px;
+}
+
+.containsButton{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height:auto;
+}
+
+.buttonOrder{
+  width: 120px;
+  background-color: red;
+  color:white;
+  height: 20px;
+}

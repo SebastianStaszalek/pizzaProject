@@ -2,23 +2,29 @@
 
 <section class="menu">
   <div>
-    <button class="button" (click)="getPizza()">Pizza</button>
+    <div>
+    <button class="button-menu" (click)="getPizza()">Pizza</button>
   </div>
-  <div>
-    <button class="button" (click)="getPasta()">Makarony</button>
-  </div>
-  <div>
-    <button class="button" (click)="getBeverage()">Napoje</button>
+    <div>
+      <button class="button-menu" (click)="getPasta()">Makarony</button>
+    </div>
+    <div>
+      <button class="button-menu" (click)="getBeverage()">Napoje</button>
+    </div>
   </div>
 
+<div>
+  <app-order-basket></app-order-basket>
   <ul class="dishes">
     <li *ngFor="let dish of dishes">
-      <span class="badge">{{dish.name}}</span> {{dish.price}}
+      <img src="https://michalwrzosek.pl/wp-content/uploads/2018/01/pizza-gora-5.png">
+      <span class="badge">{{dish.name}}</span>
+      <span>{{dish.description}}</span>
+      <span>{{dish.price}}</span>
       <button class="button" (click)="addDishToOrder(dish)">+</button>
     </li>
   </ul>
-
-  <app-order-basket></app-order-basket>
+</div>
 </section>
 
 
