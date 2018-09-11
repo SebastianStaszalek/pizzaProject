@@ -6,6 +6,7 @@
     <li *ngFor="let order of orders">
       <span class="badge">{{order.id}}</span> {{order.street}} {{order.status}} {{order.date}}
       <button class="button" routerLink="/dashboard-order-details/{{order.id}}">Podglad</button>
+      <button class="button" routerLink="/dashboard-order-address/{{order.id}}">Adres</button>
     </li>
   </ul>
 

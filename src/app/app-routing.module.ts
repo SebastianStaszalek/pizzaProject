@@ -7,6 +7,7 @@ import {DashboardDishesListComponent} from './dashboard/dashboard-dishes-list/da
 import {DashboardDishDetailsComponent} from './dashboard/dashboard-dish-details/dashboard-dish-details.component';
 import {DashboardOrdersListComponent} from './dashboard/dashboard-orders-list/dashboard-orders-list.component';
 import {DashboardOrderDetailsComponent} from './dashboard/dashboard-order-details/dashboard-order-details.component';
+import {DashboardOrderAddressComponent} from './dashboard/dashboard-order-address/dashboard-order-address.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dishes-list', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'dashboard-dishes-list', component: DashboardDishesListComponent},
   { path: 'dashboard-dish-details/:id', component: DashboardDishDetailsComponent},
   { path: 'dashboard-orders-list', component: DashboardOrdersListComponent},
-  { path: 'dashboard-order-details/:id', component: DashboardOrderDetailsComponent}
+  { path: 'dashboard-order-details/:id', component: DashboardOrderDetailsComponent},
+  { path: 'dashboard-order-address/:id', component: DashboardOrderAddressComponent}
 ];
 
 @NgModule({
