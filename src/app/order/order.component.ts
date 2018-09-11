@@ -6,6 +6,7 @@ import {OrderService} from '../order.service';
 import {OrderBasketService} from '../order-basket.service';
 import {BasketDish} from '../model/basket-dish.model';
 import {OrderStatus} from '../model/order-status.enum';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-order',
@@ -30,7 +31,12 @@ export class OrderComponent implements OnInit {
     apartmentNumber: new FormControl(''),
   });
 
-  constructor(readonly orderService: OrderService, readonly basketService: OrderBasketService) {
+  constructor(
+    readonly orderService: OrderService,
+    readonly basketService: OrderBasketService,
+    private router: Router
+  ) {
+
     this.dishIds = [];
     this.order = <Order>{};
   }
@@ -49,6 +55,7 @@ export class OrderComponent implements OnInit {
     this.order.status = OrderStatus.Accepted;
     this.order.date = new Date();
     this.orderService.addOrder(this.order).subscribe();
+    this.router.navigate(['/order-info']);
   }
 
   getDishes(): void {

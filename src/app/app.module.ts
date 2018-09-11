@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { OrderBasketComponent } from './order-basket/order-basket.component';
 import { OrderComponent } from './order/order.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { OrderInfoComponent } from './order-info/order-info.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     DishesListComponent,
     DishDetailsComponent,
     OrderBasketComponent,
-    OrderComponent
+    OrderComponent,
+    OrderInfoComponent
   ],
   imports: [
     BrowserModule,
