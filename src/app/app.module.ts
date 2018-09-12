@@ -17,7 +17,8 @@ import {DashboardDishDetailsComponent} from './dashboard/dashboard-dish-details/
 import {DashboardOrdersListComponent} from './dashboard/dashboard-orders-list/dashboard-orders-list.component';
 import {DashboardOrderDetailsComponent} from './dashboard/dashboard-order-details/dashboard-order-details.component';
 import {DashboardOrderAddressComponent} from './dashboard/dashboard-order-address/dashboard-order-address.component';
-import { LoginComponent } from './login/login.component';
+import {LoginComponent} from './credentials/login/login.component';
+import {LoginGuard} from './credentials/guard/loginGuard';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { LoginComponent } from './login/login.component';
     DashboardOrdersListComponent,
     DashboardOrderDetailsComponent,
     DashboardOrderAddressComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

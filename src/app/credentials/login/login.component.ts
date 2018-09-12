@@ -1,6 +1,5 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {User} from '../model/user.model';
-import {Subscription} from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {User} from '../../model/user.model';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {LoginService} from '../login.service';
 
@@ -13,7 +12,6 @@ export class LoginComponent implements OnInit {
 
   users: User[];
   user: User;
-  sub: Subscription;
 
   loginForm = new FormGroup({
     name: new FormControl('', Validators.required),
