@@ -1,0 +1,14 @@
+<section class="form">
+<form [formGroup]="loginForm">
+  <div>
+    <label>Login:
+      <input type="text" formControlName="name">
+    </label> <br>
+    <label>Haslo:
+      <input type="text" formControlName="password">
+    </label> <br>
+  </div>
+  <button class="submitbtn" (click)="validateLogin()">Zaloguj</button>
+</form>
+</section>
+<a routerLink="/">Powrot</a>
