@@ -118,6 +118,33 @@
       "status": "Accepted",
       "date": "2018-09-11T11:08:36.457Z",
       "id": 3
+    },
+    {
+      "firstName": "arek",
+      "lastName": "sdd",
+      "phoneNumber": 4564,
+      "eMail": "aadwp.pl",
+      "city": "ded",
+      "street": "sf",
+      "buildingNumber": "2",
+      "apartmentNumber": "23",
+      "dishIds": [
+        {
+          "dishId": 1,
+          "quantity": 2
+        },
+        {
+          "dishId": 2,
+          "quantity": 2
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        }
+      ],
+      "status": "Accepted",
+      "date": "2018-09-12T12:47:26.850Z",
+      "id": 4
     }
   ],
   "users": [

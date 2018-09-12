@@ -7,6 +7,7 @@ import {OrderBasketService} from '../order-basket.service';
 import {BasketDish} from '../../model/basket-dish.model';
 import {OrderStatus} from '../../model/enum/order-status.enum';
 import {Router} from '@angular/router';
+import {OrderQuantity} from '../../model/order-quantity';
 
 @Component({
   selector: 'app-order',
@@ -17,7 +18,7 @@ export class OrderComponent implements OnInit {
 
   sub: Subscription;
   order: Order;
-  dishIds: number[];
+  dishIds: OrderQuantity[];
   basketPositions: BasketDish[];
 
   clientDetails = new FormGroup({
@@ -56,18 +57,20 @@ export class OrderComponent implements OnInit {
     this.order.date = new Date();
     this.orderService.addOrder(this.order).subscribe();
     this.router.navigate(['/order-info']);
+
+    console.log(this.order);
   }
 
   getDishes(): void {
     this.basketPositions = this.basketService.getBasketPositions();
-    this.basketPositions.forEach(dish => this.dishIds.push(dish.id));
+    // this.basketPositions.forEach(dish => this.dishIds.push(dish.id));
 
-    // for (const dish of this.basketPositions) {
-    // const position = new OrderQuantity();
-    // position.dishId = dish.id;
-    // position.quantity = dish.counter;
-    // this.dishIds.push(position);
-    // }
+    for (const dish of this.basketPositions) {
+    const position = new OrderQuantity();
+    position.dishId = dish.id;
+    position.quantity = dish.counter;
+    this.dishIds.push(position);
+    }
   }
 
 }

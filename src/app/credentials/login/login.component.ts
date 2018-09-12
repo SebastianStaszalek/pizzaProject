@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
 
   validateLogin(): void {
     this.user = this.loginForm.value;
-    for (const cred of this.users) {
-      if (cred.name === this.user.name && cred.password === this.user.password) {
+    for (const credential of this.users) {
+      if (credential.name === this.user.name && credential.password === this.user.password) {
         this.loginService.logIn();
         return;
       }
