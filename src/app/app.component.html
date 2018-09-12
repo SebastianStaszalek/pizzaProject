@@ -2,8 +2,15 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <button class="material-icons" routerLink="/login">
-    account_box
+  <div *ngIf="!loginService.isLogged">
+    <button class="material-icons" routerLink="/login">
+      account_box
+    </button>
+  </div>
+  <div *ngIf="loginService.isLogged">
+  <button (click)="loginService.logOut()" class="material-icons">
+    exit_to_app
   </button>
+  </div>
 </header>
 <router-outlet></router-outlet>
