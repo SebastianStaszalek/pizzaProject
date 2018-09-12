@@ -1,22 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { DishesListComponent } from './dishes/dishes-list/dishes-list.component';
-import { DishDetailsComponent } from './dishes/dish-details/dish-details.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment';
+import {DishesListComponent} from './dishes/dishes-list/dishes-list.component';
+import {DishDetailsComponent} from './dishes/dish-details/dish-details.component';
 import {HttpClientModule} from '@angular/common/http';
-import { OrderBasketComponent } from './orders/order-basket/order-basket.component';
-import { OrderComponent } from './orders/order/order.component';
+import {OrderBasketComponent} from './orders/order-basket/order-basket.component';
+import {OrderComponent} from './orders/order/order.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { OrderInfoComponent } from './orders/order-info/order-info.component';
-import { DashboardDishesListComponent } from './dashboard/dashboard-dishes-list/dashboard-dishes-list.component';
-import { DashboardDishDetailsComponent } from './dashboard/dashboard-dish-details/dashboard-dish-details.component';
-import { DashboardOrdersListComponent } from './dashboard/dashboard-orders-list/dashboard-orders-list.component';
-import { DashboardOrderDetailsComponent } from './dashboard/dashboard-order-details/dashboard-order-details.component';
-import { DashboardOrderAddressComponent } from './dashboard/dashboard-order-address/dashboard-order-address.component';
+import {OrderInfoComponent} from './orders/order-info/order-info.component';
+import {DashboardDishesListComponent} from './dashboard/dashboard-dishes-list/dashboard-dishes-list.component';
+import {DashboardDishDetailsComponent} from './dashboard/dashboard-dish-details/dashboard-dish-details.component';
+import {DashboardOrdersListComponent} from './dashboard/dashboard-orders-list/dashboard-orders-list.component';
+import {DashboardOrderDetailsComponent} from './dashboard/dashboard-order-details/dashboard-order-details.component';
+import {DashboardOrderAddressComponent} from './dashboard/dashboard-order-address/dashboard-order-address.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,16 +31,21 @@ import { DashboardOrderAddressComponent } from './dashboard/dashboard-order-addr
     DashboardDishDetailsComponent,
     DashboardOrdersListComponent,
     DashboardOrderDetailsComponent,
-    DashboardOrderAddressComponent
+    DashboardOrderAddressComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
+
+
+//TODO: modyfikatory dostepu!

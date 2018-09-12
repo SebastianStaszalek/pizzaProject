@@ -37,6 +37,12 @@ li * {
   width:20%;
   height:auto;
 }
+
+li img {
+  height: 100px;
+  width: 100px;
+}
+
 .menu{
   background: lightgrey;
   border: thin black;
@@ -89,5 +95,7 @@ button.button{
 app-order-basket{
   height:60vh;
   width: 20vw;
-  background-color: antiquewhite;
+  background-color: #EEE;
 }
+
+

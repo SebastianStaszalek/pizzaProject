@@ -4,3 +4,20 @@
   border: 0;
   box-sizing: border-box;
 }
+
+h1 {
+  color: white;
+}
+
+.material-icons {
+  font-size: 46px;
+  color: white;
+  background-color: #af2c22;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #af2c22;
+}

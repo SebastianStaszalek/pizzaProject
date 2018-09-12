@@ -8,10 +8,12 @@ import {DashboardDishDetailsComponent} from './dashboard/dashboard-dish-details/
 import {DashboardOrdersListComponent} from './dashboard/dashboard-orders-list/dashboard-orders-list.component';
 import {DashboardOrderDetailsComponent} from './dashboard/dashboard-order-details/dashboard-order-details.component';
 import {DashboardOrderAddressComponent} from './dashboard/dashboard-order-address/dashboard-order-address.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dishes-list', pathMatch: 'full' },
   { path: 'dishes-list', component: DishesListComponent },
+  { path: 'login', component: LoginComponent},
   { path: 'summary', component: OrderComponent},
   { path: 'order-info', component: OrderInfoComponent},
   { path: 'dashboard-dishes-list', component: DashboardDishesListComponent},
