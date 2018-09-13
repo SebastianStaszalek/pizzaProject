@@ -1,7 +1,31 @@
 <h2>Dishes list</h2>
 
 <button routerLink="/dashboard-orders-list"></button>
-<section class="menu">
+
+<div class="menu" *ngIf="dishes!=undefined">
+  <table>
+    <tr>
+      <th>Numer pozycji</th>
+      <th>Nazwa</th>
+      <th>Typ</th>
+      <th>Dostepnosc</th>
+      <th>Podglad</th>
+    </tr>
+
+    <tr *ngFor="let dish of dishes">
+      <td>{{dish.id}}</td>
+      <td>{{dish.name}}</td>
+      <td>{{dish.type}}</td>
+      <td>{{dish.isAvailable}}</td>
+      <td>
+        <button class="button" routerLink="/dashboard-dish-details/{{dish.id}}">Podglad</button>
+      </td>
+    </tr>
+
+  </table>
+</div>
+
+<!--<section class="menu">
 
   <ul class="dishes">
     <li *ngFor="let dish of dishes">
@@ -9,6 +33,7 @@
       <button class="button" routerLink="/dashboard-dish-details/{{dish.id}}">Podglad</button>
     </li>
   </ul>
+</section>-->
 
-</section>
+
 <a routerLink="/">Powrot</a>

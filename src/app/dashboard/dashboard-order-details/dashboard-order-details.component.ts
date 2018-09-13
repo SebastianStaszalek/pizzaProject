@@ -52,7 +52,8 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
   }
 
   findDishById(id: number): Dish {
-   return this.dishes.find(item => item.id === id);
+   const dish = this.dishes.find(item => item.id === id);
+   return dish ? dish : <Dish>{};
   }
 
   changeStatusOfOrderToDelivered(): void {

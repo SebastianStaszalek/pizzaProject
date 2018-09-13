@@ -53,3 +53,4 @@ export class AppModule {
 //TODO: sprawdz OnDestroy takeUntil
 //TODO: moment.js
 //TODO: zablokuj przycisk w formularzu zanim pola beda wypelnione
+//TODO: zamien wszystko na stronie na jezyk polski!

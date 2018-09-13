@@ -1,9 +1,11 @@
-<div class="menu">
-  <p>Numer pozycji: {{dish.id}}</p>
-  <p>Nazwa: {{dish.name}}</p>
-  <p>Skladniki: {{dish.description}}</p>
-  <p>Cena: {{dish.price}}</p>
-  <p>Typ: {{dish.type}}</p>
-  <p>Dostepnosc: {{dish.isAvailable}}</p>
+<div>
+  <ul class="menu">
+      <li>Numer pozycji: {{dish.id}}</li>
+      <li>Nazwa: {{dish.name}}</li>
+      <li>Skladniki: {{dish.description}}</li>
+      <li>Cena: {{dish.price}}</li>
+      <li>Typ: {{dish.type}}</li>
+      <li>Dostepnosc: {{dish.isAvailable}}</li>
+  </ul>
 </div>
 <a routerLink="/dashboard-dishes-list">Powrot</a>

@@ -1,4 +1,4 @@
-<div class="menu" *ngIf="order!=undefined">
+<div class="menu" *ngIf="order">
 
   <table>
     <tr>
@@ -30,11 +30,6 @@
     <button (click)="changeStatusOfOrderToInTransit()">W trakcie dowozu</button>
     <button (click)="changeStatusOfOrderToAccepted()">Przyjeto do realizacji</button>
   </div>
-  <!--  <div *ngFor="let position of order.dishIds">
-      <p>Nazwa : {{findDishById(position.dishId).name}} </p>
-      <p>Danie : {{findDishById(position.dishId).type}}</p>
-      <p>Ilosc : {{position.quantity}} {{findDishById(position.dishId).price * position.quantity}}</p>
-    </div>-->
 
 </div>
 
