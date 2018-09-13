@@ -19,6 +19,7 @@ import {DashboardOrderDetailsComponent} from './dashboard/dashboard-order-detail
 import {DashboardOrderAddressComponent} from './dashboard/dashboard-order-address/dashboard-order-address.component';
 import {LoginComponent} from './credentials/login/login.component';
 import {LoginGuard} from './credentials/guard/loginGuard';
+import { AdminPanelComponent } from './dashboard/admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {LoginGuard} from './credentials/guard/loginGuard';
     DashboardOrderDetailsComponent,
     DashboardOrderAddressComponent,
     LoginComponent,
+    AdminPanelComponent,
   ],
   imports: [
     BrowserModule,

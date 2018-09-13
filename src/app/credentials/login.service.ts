@@ -24,7 +24,7 @@ export class LoginService {
 
   logIn() {
     this.isLogged = true;
-    this.router.navigate(['/dashboard-dishes-list']);
+    this.router.navigate(['/admin-panel']);
   }
 
   logOut() {

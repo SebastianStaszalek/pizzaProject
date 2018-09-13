@@ -10,11 +10,13 @@ import {DashboardOrderDetailsComponent} from './dashboard/dashboard-order-detail
 import {DashboardOrderAddressComponent} from './dashboard/dashboard-order-address/dashboard-order-address.component';
 import {LoginComponent} from './credentials/login/login.component';
 import {LoginGuard} from './credentials/guard/loginGuard';
+import {AdminPanelComponent} from './dashboard/admin-panel/admin-panel.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dishes-list', pathMatch: 'full' },
   { path: 'dishes-list', component: DishesListComponent },
   { path: 'login', component: LoginComponent},
+  { path: 'admin-panel', component: AdminPanelComponent},
   { path: 'summary', component: OrderComponent},
   { path: 'order-info', component: OrderInfoComponent},
   { path: 'dashboard-dishes-list', component: DashboardDishesListComponent, canActivate: [LoginGuard]},
