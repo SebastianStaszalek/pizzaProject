@@ -19,4 +19,8 @@ export class DashboardDishesService {
   getDish(id: number): Observable<Dish> {
     return this.http.get<Dish>(`/api/dishes/${id}`);
   }
+
+  update(dish: Dish): Observable<Dish> {
+    return this.http.put<Dish>(`/api/dishes/${dish.id}`, dish);
+  }
 }

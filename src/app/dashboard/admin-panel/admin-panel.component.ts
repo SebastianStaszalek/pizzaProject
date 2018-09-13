@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-admin-panel',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    readonly router: Router,
+    readonly route: ActivatedRoute
+  ) {
+  }
 
   ngOnInit() {
+  }
+
+  showDishesList() {
+    this.router.navigate(['dashboard-dishes-list'], {relativeTo: this.route});
+  }
+
+  showOrdersList() {
+    this.router.navigate(['dashboard-orders-list'], {relativeTo: this.route});
   }
 
 }

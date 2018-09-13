@@ -1,9 +1,9 @@
 
 
-<nav>
-  <button><a routerLink="/dashboard-dishes-list">Lista dan</a></button>
-  <button><a routerLink="/dashboard-orders-list">Lista zamowien</a></button>
-</nav>
+<p>
+  <button (click)="showDishesList()">Lista dan</button>
+  <button (click)="showOrdersList()">Lista zamowien</button>
+</p>
 <div>
 <router-outlet></router-outlet>
 </div>

@@ -21,7 +21,7 @@ export class DashboardOrdersService {
     return this.http.get<Order>(`/api/orders/${id}`);
   }
 
-  changeStatusOfOrder(order: Order): Observable<Order> {
+  update(order: Order): Observable<Order> {
     return this.http.put<Order>(`/api/orders/${order.id}`, order);
   }
 }

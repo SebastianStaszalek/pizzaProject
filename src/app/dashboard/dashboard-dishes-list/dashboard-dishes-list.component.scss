@@ -1,65 +1,52 @@
-.dishes {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 30em;
-}
-.dishes li {
-  position: relative;
-  cursor: pointer;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-}
-
-.dishes li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
-
-.dishes a {
-  color: #888;
-  text-decoration: none;
-  position: relative;
-  display: block;
-  width: 250px;
-}
-
-.dishes a:hover {
-  color:#607D8B;
-}
-
-.dishes .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  min-width: 16px;
-  text-align: right;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-}
-
-.menu{
+.menu {
   background: lightgrey;
   border: thin black;
   border-top: 20px;
   width: 65vw;
   height: 70vh;
-  border-radius: 30px;
-  display:  flex;
+  display: flex;
   margin: 10px;
   top: 100px;
   right: 0;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: #999;
+  text-align: justify;
+  vertical-align: top;
+}
+
+.tg td {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 5px 15px;
+  border-style: solid;
+  border-width: 0;
+  overflow: hidden;
+  word-break: normal;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-color: #999;
+  color: #444;
+  background-color: #F7FDFA;
+}
+
+.tg th {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 10px 10px;
+  border-style: solid;
+  border-width: 0;
+  overflow: hidden;
+  word-break: normal;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-color: #999;
+  color: #fff;
+  background-color: #af4f47;
 }
 
 .button {
@@ -72,3 +59,9 @@
   display: inline-block;
   font-size: 10px;
 }
+
+.check {
+  text-align: center;
+}
+
+

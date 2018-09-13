@@ -58,17 +58,17 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
 
   changeStatusOfOrderToDelivered(): void {
     this.order.status = OrderStatus.Delivered;
-    this.sub = this.dashboardOrdersService.changeStatusOfOrder(this.order).subscribe();
+    this.sub = this.dashboardOrdersService.update(this.order).subscribe();
   }
 
   changeStatusOfOrderToInTransit(): void {
     this.order.status = OrderStatus.InTransit;
-    this.sub = this.dashboardOrdersService.changeStatusOfOrder(this.order).subscribe();
+    this.sub = this.dashboardOrdersService.update(this.order).subscribe();
   }
 
   changeStatusOfOrderToAccepted(): void {
     this.order.status = OrderStatus.Accepted;
-    this.sub = this.dashboardOrdersService.changeStatusOfOrder(this.order).subscribe();
+    this.sub = this.dashboardOrdersService.update(this.order).subscribe();
   }
 
   ngOnDestroy(): void {

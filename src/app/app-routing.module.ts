@@ -16,12 +16,15 @@ const routes: Routes = [
   { path: '', redirectTo: 'dishes-list', pathMatch: 'full' },
   { path: 'dishes-list', component: DishesListComponent },
   { path: 'login', component: LoginComponent},
-  { path: 'admin-panel', component: AdminPanelComponent},
+  { path: 'admin-panel', component: AdminPanelComponent, canActivate: [LoginGuard],
+    children: [
+      { path: 'dashboard-dishes-list', component: DashboardDishesListComponent, canActivate: [LoginGuard]},
+      { path: 'dashboard-orders-list', component: DashboardOrdersListComponent, canActivate: [LoginGuard]}
+    ]
+  },
   { path: 'summary', component: OrderComponent},
   { path: 'order-info', component: OrderInfoComponent},
-  { path: 'dashboard-dishes-list', component: DashboardDishesListComponent, canActivate: [LoginGuard]},
   { path: 'dashboard-dish-details/:id', component: DashboardDishDetailsComponent, canActivate: [LoginGuard]},
-  { path: 'dashboard-orders-list', component: DashboardOrdersListComponent, canActivate: [LoginGuard]},
   { path: 'dashboard-order-details/:id', component: DashboardOrderDetailsComponent, canActivate: [LoginGuard]},
   { path: 'dashboard-order-address/:id', component: DashboardOrderAddressComponent, canActivate: [LoginGuard]}
 ];

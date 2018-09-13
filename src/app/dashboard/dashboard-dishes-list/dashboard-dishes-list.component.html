@@ -1,7 +1,7 @@
 <h2>Dishes list</h2>
 
-<div class="menu" *ngIf="dishes!=undefined">
-  <table>
+<div class="menu" *ngIf="dishes">
+  <table class="tg">
     <tr>
       <th>Numer pozycji</th>
       <th>Nazwa</th>
@@ -14,7 +14,7 @@
       <td>{{dish.id}}</td>
       <td>{{dish.name}}</td>
       <td>{{dish.type}}</td>
-      <td>{{dish.isAvailable}}</td>
+      <td class="check"><input type="checkbox" (click)="changeAvailability(dish)" [checked]="dish.isAvailable"></td>
       <td>
         <button class="button" routerLink="/dashboard-dish-details/{{dish.id}}">Podglad</button>
       </td>
@@ -23,15 +23,4 @@
   </table>
 </div>
 
-<!--<section class="menu">
 
-  <ul class="dishes">
-    <li *ngFor="let dish of dishes">
-      <span class="badge">{{dish.id}}</span> {{dish.name}} {{dish.type}} {{dish.isAvailable}}
-      <button class="button" routerLink="/dashboard-dish-details/{{dish.id}}">Podglad</button>
-    </li>
-  </ul>
-</section>-->
-
-
-<a routerLink="/admin-panel">Powrot</a>

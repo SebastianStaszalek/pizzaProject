@@ -51,8 +51,10 @@ export class AppModule {
 }
 
 
-//TODO: modyfikatory dostepu!
-//TODO: sprawdz OnDestroy takeUntil
-//TODO: moment.js
-//TODO: zablokuj przycisk w formularzu zanim pola beda wypelnione
-//TODO: zamien wszystko na stronie na jezyk polski!
+// TODO: modyfikatory dostepu!
+// TODO: sprawdz OnDestroy takeUntil
+// TODO: moment.js
+// TODO: zablokuj przycisk w formularzu zanim pola beda wypelnione
+// TODO: zamien wszystko na stronie na jezyk polski!
+// TODO: wstaw odpowiednie zdjecia
+// TODO: znajdz jakies logo

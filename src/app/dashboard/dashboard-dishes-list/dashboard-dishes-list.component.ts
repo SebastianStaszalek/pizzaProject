@@ -27,6 +27,11 @@ export class DashboardDishesListComponent implements OnInit, OnDestroy {
       .subscribe(dishes => this.dishes = dishes);
   }
 
+  changeAvailability(dish: Dish): void {
+    dish.isAvailable = !dish.isAvailable;
+    this.sub = this.dashboardDishesService.update(dish).subscribe();
+  }
+
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
