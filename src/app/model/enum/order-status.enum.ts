@@ -1,5 +1,5 @@
 export enum OrderStatus {
-  Accepted = 'Accepted',
-  InTransit = 'In transit',
-  Delivered = 'Delivered'
+  Accepted = 'Zaakceptowany',
+  InTransit = 'W trakcie dowozu',
+  Delivered = 'Dostarczone'
 }

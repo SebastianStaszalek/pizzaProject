@@ -50,3 +50,6 @@ export class AppModule {
 
 
 //TODO: modyfikatory dostepu!
+//TODO: sprawdz OnDestroy takeUntil
+//TODO: moment.js
+//TODO: zablokuj przycisk w formularzu zanim pola beda wypelnione

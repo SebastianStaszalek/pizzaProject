@@ -5,6 +5,10 @@
       <label>Imie:
         <input type="text" formControlName="firstName">
       </label> <br>
+
+      <div *ngIf="clientDetails.controls['firstName'].errors">
+        wpisz imie!
+      </div>
       <label>Nazwisko:
         <input type="text" formControlName="lastName">
       </label> <br>

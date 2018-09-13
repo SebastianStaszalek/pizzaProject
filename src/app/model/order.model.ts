@@ -14,4 +14,5 @@ export interface Order {
   street: string;
   buildingNumber: string;
   apartmentNumber: string;
+  totalCost: number;
 }

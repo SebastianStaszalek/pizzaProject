@@ -38,7 +38,7 @@ export class OrderComponent implements OnInit {
     private router: Router
   ) {
 
-    this.dishIds = [];
+    this.dishIds = <OrderQuantity[]>{};
     this.order = <Order>{};
   }
 
@@ -55,15 +55,13 @@ export class OrderComponent implements OnInit {
     this.order.dishIds = this.dishIds;
     this.order.status = OrderStatus.Accepted;
     this.order.date = new Date();
+    this.order.totalCost = this.basketService.getBasketCost();
     this.orderService.addOrder(this.order).subscribe();
     this.router.navigate(['/order-info']);
-
-    console.log(this.order);
   }
 
   getDishes(): void {
     this.basketPositions = this.basketService.getBasketPositions();
-    // this.basketPositions.forEach(dish => this.dishIds.push(dish.id));
 
     for (const dish of this.basketPositions) {
     const position = new OrderQuantity();

@@ -67,65 +67,12 @@
   ],
   "orders": [
     {
-      "firstName": "seb",
-      "lastName": "st",
-      "phoneNumber": 4560496,
-      "eMail": "seb@wp.pl",
-      "city": "poz",
-      "street": "dsf",
-      "buildingNumber": "23",
-      "apartmentNumber": "34",
-      "dishIds": [
-        1,
-        2,
-        3
-      ],
-      "id": 1
-    },
-    {
-      "firstName": "alan",
-      "lastName": "sdsd",
-      "phoneNumber": 455454,
-      "eMail": "ss@onet.pl",
-      "city": "deff",
-      "street": "efesfe",
-      "buildingNumber": "34",
-      "apartmentNumber": "2",
-      "dishIds": [
-        5,
-        6,
-        1,
-        2,
-        3
-      ],
-      "date": "2018-09-10T21:08:50.719Z",
-      "id": 2
-    },
-    {
-      "firstName": "eefef",
-      "lastName": "efef",
-      "phoneNumber": 45565,
-      "eMail": "abc@gmail.com",
-      "city": "ewfef",
-      "street": "efef",
-      "buildingNumber": "33",
-      "apartmentNumber": "23",
-      "dishIds": [
-        1,
-        2,
-        3
-      ],
-      "status": "Accepted",
-      "date": "2018-09-11T11:08:36.457Z",
-      "id": 3
-    },
-    {
       "firstName": "arek",
-      "lastName": "sdd",
-      "phoneNumber": 4564,
-      "eMail": "aadwp.pl",
-      "city": "ded",
-      "street": "sf",
+      "lastName": "romanowski",
+      "phoneNumber": 620450321,
+      "eMail": "arek@wp.pl",
+      "city": "Poznan",
+      "street": "Wodna",
       "buildingNumber": "2",
       "apartmentNumber": "23",
       "dishIds": [
@@ -144,7 +91,22 @@
       ],
       "status": "Accepted",
       "date": "2018-09-12T12:47:26.850Z",
-      "id": 4
+      "id": 1
+    },
+    {
+      "firstName": "Arek",
+      "lastName": "Grabowski",
+      "phoneNumber": 500430210,
+      "eMail": "arbrab@onet.pl",
+      "city": "Lubon",
+      "street": "Krakowska",
+      "buildingNumber": "10C",
+      "apartmentNumber": "",
+      "dishIds": {},
+      "status": "Zaakceptowany",
+      "date": "2018-09-13T08:53:10.953Z",
+      "totalCost": 79,
+      "id": 2
     }
   ],
   "users": [
