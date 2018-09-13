@@ -17,16 +17,24 @@
       <td>{{findDishById(position.dishId).price * position.quantity}}</td>
     </tr>
 
-  </table> <br>
+  </table>
+  <br>
+  <div>
+    <div>Cena zamowienia: {{order.totalCost}}</div>
+    <br>
+    <div>Status zamowienia: {{order.status}}</div>
+  </div>
 
-  <div>Cena zamowienia: {{order.totalCost}}</div> <br>
-  <div>Status zamowienia: {{order.status}}</div>
-
-<!--  <div *ngFor="let position of order.dishIds">
-    <p>Nazwa : {{findDishById(position.dishId).name}} </p>
-    <p>Danie : {{findDishById(position.dishId).type}}</p>
-    <p>Ilosc : {{position.quantity}} {{findDishById(position.dishId).price * position.quantity}}</p>
-  </div>-->
+  <div>
+    <button (click)="changeStatusOfOrderToDelivered()">Dostarczono</button>
+    <button (click)="changeStatusOfOrderToInTransit()">W trakcie dowozu</button>
+    <button (click)="changeStatusOfOrderToAccepted()">Przyjeto do realizacji</button>
+  </div>
+  <!--  <div *ngFor="let position of order.dishIds">
+      <p>Nazwa : {{findDishById(position.dishId).name}} </p>
+      <p>Danie : {{findDishById(position.dishId).type}}</p>
+      <p>Ilosc : {{position.quantity}} {{findDishById(position.dishId).price * position.quantity}}</p>
+    </div>-->
 
 </div>
 

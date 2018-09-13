@@ -112,7 +112,7 @@
           "quantity": 1
         }
       ],
-      "status": "Zaakceptowany",
+      "status": "W trakcie dowozu",
       "date": "2018-09-13T10:01:36.045Z",
       "totalCost": 67.5,
       "id": 2

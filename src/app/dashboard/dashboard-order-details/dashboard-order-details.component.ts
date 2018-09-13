@@ -2,10 +2,11 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Order} from '../../model/order.model';
 import {ActivatedRoute} from '@angular/router';
 import {DashboardOrdersService} from '../dashboard-orders.service';
-import {DishesService} from '../../dishes/dishes.service';
 import {Dish} from '../../model/dish.model';
 import {takeUntil} from 'rxjs/operators';
-import {Subject} from 'rxjs';
+import {Subject, Subscription} from 'rxjs';
+import {DashboardDishesService} from '../dashboard-dishes.service';
+import {OrderStatus} from '../../model/enum/order-status.enum';
 
 @Component({
   selector: 'app-dashboard-order-details',
@@ -16,13 +17,14 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
 
   order: Order;
   dishes: Dish[] = [];
+  sub: Subscription;
 
   private readonly destroy$ = new Subject();
 
   constructor(
     private route: ActivatedRoute,
     private dashboardOrdersService: DashboardOrdersService,
-    private dishService: DishesService
+    private dashboardDishService: DashboardDishesService,
   ) {
     this.order = <Order>{};
   }
@@ -42,7 +44,7 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
 
   getDishes(): void {
     for (const dishId of this.order.dishIds) {
-      this.dishService.getDish(dishId.dishId).pipe(takeUntil(this.destroy$))
+      this.dashboardDishService.getDish(dishId.dishId).pipe(takeUntil(this.destroy$))
         .subscribe(item => {
           this.dishes.push(item);
         });
@@ -53,9 +55,26 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
    return this.dishes.find(item => item.id === id);
   }
 
+  changeStatusOfOrderToDelivered(): void {
+    this.order.status = OrderStatus.Delivered;
+    this.sub = this.dashboardOrdersService.changeStatusOfOrder(this.order).subscribe();
+  }
+
+  changeStatusOfOrderToInTransit(): void {
+    this.order.status = OrderStatus.InTransit;
+    this.sub = this.dashboardOrdersService.changeStatusOfOrder(this.order).subscribe();
+  }
+
+  changeStatusOfOrderToAccepted(): void {
+    this.order.status = OrderStatus.Accepted;
+    this.sub = this.dashboardOrdersService.changeStatusOfOrder(this.order).subscribe();
+  }
+
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
   }
+
+
 
 }
