@@ -7,7 +7,7 @@
       <th class="tg">Numer pozycji</th>
       <th>Ulica</th>
       <th>Status</th>
-      <th>Data</th>
+      <th>Data przyjecia</th>
       <th></th>
       <th></th>
     </tr>
@@ -17,20 +17,15 @@
       <td>{{order.street}}</td>
       <td>{{order.status}}</td>
       <td>{{order.date}}</td>
-      <td><button class="button" routerLink="/dashboard-order-details/{{order.id}}">Podglad</button></td>
-      <td> <button class="button" routerLink="/dashboard-order-address/{{order.id}}">Adres</button></td>
+      <td>
+        <button class="button" routerLink="/dashboard-order-details/{{order.id}}">Podglad</button>
+      </td>
+      <td>
+        <button class="button" routerLink="/dashboard-order-address/{{order.id}}">Adres</button>
+      </td>
     </tr>
 
   </table>
-
-
-<!--  <ul class="dishes">
-    <li *ngFor="let order of orders">
-      <span class="badge">{{order.id}}</span> {{order.street}} {{order.status}} {{order.date}}
-      <button class="button" routerLink="/dashboard-order-details/{{order.id}}">Podglad</button>
-      <button class="button" routerLink="/dashboard-order-address/{{order.id}}">Adres</button>
-    </li>
-  </ul>-->
 
 </section>
 <a routerLink="/admin-panel">Powrot</a>

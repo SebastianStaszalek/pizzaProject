@@ -8,6 +8,7 @@ import {BasketDish} from '../../model/basket-dish.model';
 import {OrderStatus} from '../../model/enum/order-status.enum';
 import {Router} from '@angular/router';
 import {OrderQuantity} from '../../model/order-quantity';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-order',
@@ -52,7 +53,7 @@ export class OrderComponent implements OnInit {
     this.order = this.clientDetails.value;
     this.order.dishIds = this.dishIds;
     this.order.status = OrderStatus.Accepted;
-    this.order.date = new Date();
+    this.order.date = moment().format('YYYY-MM-DD HH:mm');
     this.order.totalCost = this.basketService.getBasketCost();
     this.orderService.addOrder(this.order).subscribe();
     this.router.navigate(['/order-info']);
