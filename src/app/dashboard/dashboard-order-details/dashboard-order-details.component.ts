@@ -16,7 +16,6 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
 
   order: Order;
   dishes: Dish[] = [];
-  itemCost: number;
 
   private readonly destroy$ = new Subject();
 
@@ -25,6 +24,7 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
     private dashboardOrdersService: DashboardOrdersService,
     private dishService: DishesService
   ) {
+    this.order = <Order>{};
   }
 
   ngOnInit() {

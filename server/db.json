@@ -89,23 +89,32 @@
           "quantity": 1
         }
       ],
-      "status": "Accepted",
+      "status": "Zaakceptowany",
       "date": "2018-09-12T12:47:26.850Z",
       "id": 1
     },
     {
-      "firstName": "Arek",
-      "lastName": "Grabowski",
-      "phoneNumber": 500430210,
-      "eMail": "arbrab@onet.pl",
-      "city": "Lubon",
-      "street": "Krakowska",
-      "buildingNumber": "10C",
+      "firstName": "seba",
+      "lastName": "",
+      "phoneNumber": "",
+      "eMail": "",
+      "city": "",
+      "street": "",
+      "buildingNumber": "",
       "apartmentNumber": "",
-      "dishIds": {},
+      "dishIds": [
+        {
+          "dishId": 1,
+          "quantity": 2
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        }
+      ],
       "status": "Zaakceptowany",
-      "date": "2018-09-13T08:53:10.953Z",
-      "totalCost": 79,
+      "date": "2018-09-13T10:01:36.045Z",
+      "totalCost": 67.5,
       "id": 2
     }
   ],

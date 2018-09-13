@@ -1,14 +1,33 @@
 <div class="menu" *ngIf="order!=undefined">
 
- <!-- <div *ngFor="let position of order.dishIds">-->
+  <table>
+    <tr>
+      <th>Numer pozycji</th>
+      <th>Nazwa</th>
+      <th>Typ</th>
+      <th>Ilosc</th>
+      <th>Cena</th>
+    </tr>
 
-    <div *ngFor="let position of order.dishIds">
-      <p>Nazwa : {{findDishById(position.dishId).name}}  </p>
-      <p>Danie : {{findDishById(position.dishId).type}}</p>
-      <p>Ilosc : {{position.quantity}} {{findDishById(position.dishId).price * position.quantity}}</p>
+    <tr *ngFor="let position of order.dishIds">
+      <td>{{position.dishId}}</td>
+      <td>{{findDishById(position.dishId).name}}</td>
+      <td>{{findDishById(position.dishId).type}}</td>
+      <td>{{position.quantity}}</td>
+      <td>{{findDishById(position.dishId).price * position.quantity}}</td>
+    </tr>
 
-    </div>
+  </table> <br>
 
-  </div>
+  <div>Cena zamowienia: {{order.totalCost}}</div> <br>
+  <div>Status zamowienia: {{order.status}}</div>
+
+<!--  <div *ngFor="let position of order.dishIds">
+    <p>Nazwa : {{findDishById(position.dishId).name}} </p>
+    <p>Danie : {{findDishById(position.dishId).type}}</p>
+    <p>Ilosc : {{position.quantity}} {{findDishById(position.dishId).price * position.quantity}}</p>
+  </div>-->
+
+</div>
 
 <a routerLink="/dashboard-orders-list">Powrot</a>

@@ -18,7 +18,7 @@ export class OrderComponent implements OnInit {
 
   sub: Subscription;
   order: Order;
-  dishIds: OrderQuantity[];
+  dishIds: OrderQuantity[] = [];
   basketPositions: BasketDish[];
 
   clientDetails = new FormGroup({
@@ -37,8 +37,6 @@ export class OrderComponent implements OnInit {
     readonly basketService: OrderBasketService,
     private router: Router
   ) {
-
-    this.dishIds = <OrderQuantity[]>{};
     this.order = <Order>{};
   }
 
