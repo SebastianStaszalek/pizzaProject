@@ -55,6 +55,7 @@ export class OrderComponent implements OnInit {
     this.order.status = OrderStatus.Accepted;
     this.order.date = moment().format('YYYY-MM-DD HH:mm');
     this.order.totalCost = this.basketService.getBasketCost();
+
     this.orderService.addOrder(this.order).subscribe();
     this.router.navigate(['/order-info']);
   }
@@ -63,10 +64,10 @@ export class OrderComponent implements OnInit {
     this.basketPositions = this.basketService.getBasketPositions();
 
     for (const dish of this.basketPositions) {
-    const position = new OrderQuantity();
-    position.dishId = dish.id;
-    position.quantity = dish.counter;
-    this.dishIds.push(position);
+      const position = new OrderQuantity();
+      position.dishId = dish.id;
+      position.quantity = dish.counter;
+      this.dishIds.push(position);
     }
   }
 
