@@ -13,6 +13,10 @@ export class DishesService {
     readonly http: HttpClient,
   ) {}
 
+  getDishes(): Observable<Dish[]> {
+    return this.http.get<Dish[]>('/api/dishes');
+  }
+
   getPizza(): Observable<Dish[]> {
     return this.http.get<Dish[]>('/api/dishes/?type=pizza')
       .pipe(map(dish => dish.filter(av => av.isAvailable)));

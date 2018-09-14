@@ -6,6 +6,8 @@ import {OrderBasketService} from '../../orders/order-basket.service';
 import {of} from 'rxjs';
 import {HttpClientModule} from '@angular/common/http';
 import {OrderBasketComponent} from '../../orders/order-basket/order-basket.component';
+import {OrderService} from '../../orders/order.service';
+import {Dish} from '../../model/dish.model';
 
 fdescribe('DishesListComponent', () => {
   let component: DishesListComponent;
@@ -52,9 +54,34 @@ fdescribe('DishesListComponent', () => {
     const getPastaSpy = spyOn(dishesService, 'getPasta').and.returnValue(of([]));
 
     // when
-   component.getPasta();
+    component.getPasta();
 
-   // then
-   expect(getPastaSpy).toHaveBeenCalled();
+    // then
+    expect(getPastaSpy).toHaveBeenCalled();
+  });
+
+  it('should call dishService when getPasta', () => {
+    // given
+    const dishesService = TestBed.get(DishesService);
+    const getBeverageSpy = spyOn(dishesService, 'getBeverage').and.returnValue(of([]));
+
+    // when
+    component.getBeverage();
+
+    // then
+    expect(getBeverageSpy).toHaveBeenCalled();
+  });
+
+  it('should call orderService when addDishToOrder', () => {
+    // given
+    const orderBasketService = TestBed.get(OrderBasketService);
+    const addDishToOrderSpy = spyOn(orderBasketService, 'addDishToBasket').and.returnValue(of([]));
+    const dish: Dish = <Dish>{};
+
+    // when
+    component.addDishToOrder(dish);
+
+    // then
+    expect(addDishToOrderSpy).toHaveBeenCalled();
   });
 });
