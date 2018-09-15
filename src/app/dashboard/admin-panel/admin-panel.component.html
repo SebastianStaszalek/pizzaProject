@@ -1,9 +1,11 @@
-
-
-<p>
-  <button (click)="showDishesList()">Lista dan</button>
-  <button (click)="showOrdersList()">Lista zamowien</button>
-</p>
-<div>
-<router-outlet></router-outlet>
+<section class="menu">
+  <div class="button-menu">
+    <button (click)="showDishesList()">Lista dan</button>
+  </div>
+  <div class="button-menu">
+    <button (click)="showOrdersList()">Lista zamowien</button>
+  </div>
+</section>
+<div class="list">
+  <router-outlet></router-outlet>
 </div>

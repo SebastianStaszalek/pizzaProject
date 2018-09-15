@@ -1,3 +1,7 @@
+h3 {
+  justify-self: center;
+}
+
 li{
   list-style: none;
   display:flex;
@@ -7,15 +11,20 @@ li{
   justify-content: space-around;
 }
 
+span {
+  padding-left: 10px;
+}
+
+
 .dishes{
   padding: 0;
   margin: 0;
   font-family: Arial;
+  font-size: small;
 }
 
 .button{
   width: 20px;
-
   height: 20px;
 }
 
@@ -32,4 +41,14 @@ li{
   border: none;
   color:white;
   height: 25px;
+}
+
+.removeButton {
+  background-color: #af2c22;
+  border: none;
+  color:white;
+  height: 20px;
+  width: 15px;
+
+
 }

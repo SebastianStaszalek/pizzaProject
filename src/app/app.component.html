@@ -1,16 +1,21 @@
-<header style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <div *ngIf="!loginService.isLogged">
-    <button class="material-icons" routerLink="/login">
-      account_box
-    </button>
-  </div>
-  <div *ngIf="loginService.isLogged">
-  <button (click)="loginService.logOut()" class="material-icons">
-    exit_to_app
-  </button>
-  </div>
+<header>
+    <div>
+      <img class="pizza-icon" routerLink="/" src="../assets/icons/pizza%20(2).png">
+    </div>
+    <div class="title">
+      <h1>
+        {{ title }}
+      </h1>
+    </div>
+    <div *ngIf="!loginService.isLogged">
+      <button class="material-icons" routerLink="/login">
+        account_box
+      </button>
+    </div>
+    <div *ngIf="loginService.isLogged">
+      <button (click)="loginService.logOut()" class="material-icons">
+        exit_to_app
+      </button>
+    </div>
 </header>
 <router-outlet></router-outlet>

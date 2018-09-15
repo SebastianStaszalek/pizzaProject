@@ -7,7 +7,7 @@ import {LoginService} from './credentials/login.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pizza-project';
+  title = 'Pizzeria San Sebastiano';
 
 
   constructor(
