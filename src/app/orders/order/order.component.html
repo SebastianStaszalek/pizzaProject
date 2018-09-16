@@ -1,37 +1,51 @@
-<section class="form">
-  <h3>Adres dostawy</h3> <br>
-  <form [formGroup]="clientDetails">
-    <div>
-      <label>Imie:
-        <input type="text" formControlName="firstName">
-      </label> <br>
+<div class="order">
 
-      <div *ngIf="clientDetails.controls['firstName'].errors">
-        wpisz imie!
+  <div>
+    <app-order-basket></app-order-basket>
+  </div>
+
+  <div class="container">
+    <h3>Adres dostawy</h3>
+    <hr>
+    <form [formGroup]="clientDetails">
+      <div>
+        <div>
+          <label>Imie:
+            <input type="text" formControlName="firstName">
+          </label> <br>
+          <span *ngIf="clientDetails.controls['firstName'].touched">
+            wpisz imie!
+          </span>
+          <label>Nazwisko:
+            <input type="text" formControlName="lastName">
+          </label>
+        </div>
+        <div>
+          <label>Numer telefonu:
+            <input type="number" formControlName="phoneNumber">
+          </label>
+          <label>E-mail:
+            <input type="email" formControlName="eMail">
+          </label>
+        </div>
+        <div>
+          <label>Miasto
+            <input type="text" formControlName="city">
+          </label>
+          <label>Ulica:
+            <input type="text" formControlName="street">
+          </label>
+        </div>
+        <div>
+          <label>Numer domu:
+            <input type="text" formControlName="buildingNumber">
+          </label>
+          <label>Numer mieszkania:
+            <input type="text" formControlName="apartmentNumber">
+          </label>
+        </div>
       </div>
-      <label>Nazwisko:
-        <input type="text" formControlName="lastName">
-      </label> <br>
-      <label>Numer telefonu:
-        <input type="number" formControlName="phoneNumber">
-      </label> <br>
-      <label>E-mail:
-        <input type="email" formControlName="eMail">
-      </label> <br>
-      <label>Miasto
-        <input type="text" formControlName="city">
-      </label> <br>
-      <label>Ulica:
-        <input type="text" formControlName="street">
-      </label> <br>
-      <label>Numer domu:
-        <input type="text" formControlName="buildingNumber">
-      </label> <br>
-      <label>Numer mieszkania:
-        <input type="text" formControlName="apartmentNumber">
-      </label> <br>
-    </div>
-    <button class="submitbtn" (click)="addOrder()">Zatwierdz</button>
-  </form>
-</section>
-<app-order-basket></app-order-basket>
+      <button class="registerbtn" [disabled]="!clientDetails.valid" (click)="addOrder()">Zatwierdz</button>
+    </form>
+  </div>
+</div>

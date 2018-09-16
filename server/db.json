@@ -89,7 +89,7 @@
           "quantity": 1
         }
       ],
-      "status": "W trakcie dowozu",
+      "status": "Zaakceptowany",
       "date": "2018-09-12T12:47:26.850Z",
       "id": 1
     },
@@ -116,6 +116,36 @@
       "date": "2018-09-13T10:01:36.045Z",
       "totalCost": 67.5,
       "id": 2
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "phoneNumber": "",
+      "eMail": "",
+      "city": "",
+      "street": "",
+      "buildingNumber": "",
+      "apartmentNumber": "",
+      "dishIds": [],
+      "status": "Zaakceptowany",
+      "date": "2018-09-16 11:57",
+      "totalCost": 0,
+      "id": 3
+    },
+    {
+      "firstName": "artur",
+      "lastName": "palka",
+      "phoneNumber": 600000000,
+      "eMail": "abc@wp.pl",
+      "city": "poznan",
+      "street": "forteczna",
+      "buildingNumber": "12",
+      "apartmentNumber": "56",
+      "dishIds": [],
+      "status": "Zaakceptowany",
+      "date": "2018-09-16 11:59",
+      "totalCost": 0,
+      "id": 4
     }
   ],
   "users": [

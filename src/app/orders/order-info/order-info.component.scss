@@ -1,0 +1,32 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 150px;
+
+}
+
+.message {
+  border-style: solid;
+  border-color: green;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+button {
+  width: 200px;
+  background-color: darkgreen;
+  border: none;
+  color:white;
+  height: 35px;
+  border-radius: 10px;
+}

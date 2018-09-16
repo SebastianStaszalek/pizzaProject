@@ -10,6 +10,8 @@
 <br>
 <span>Razem: {{service.getBasketCost()}} zł</span>
 <br>
-<div class="containsButton"><button class="buttonOrder" routerLink="/summary">Zamowienie</button></div>
+<div class="containsButton">
+  <button [disabled]="service.getBasketCost()<=0" class="buttonOrder" routerLink="/summary">Zamowienie</button>
+</div>
 
 

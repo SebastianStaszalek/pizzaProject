@@ -1,12 +1,77 @@
-.form{
-  background: lightgrey;
-  border: thin black;
-  border-top: 20px;
-  width: 30vw;
-  height: 40vh;
-  border-radius: 30px;
-  display:  flex;
-  margin: 10px;
-  top: 100px;
-  right: 0;
+
+.order {
+  display: flex;
+  justify-content: space-around;
+}
+
+app-order-basket{
+  height:60vh;
+  width: 20vw;
+  background-color: #EEE;
+  display: grid;
+  margin-top: 150px;
+}
+
+* {box-sizing: border-box}
+
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+input[type=text], input[type=number], input[type=email] {
+  width: 40vw;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  display: flex;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+span {
+  display: flex;
+  margin-bottom: 15px;
+  color: #af2c22;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+  width: 40vw;
+  background-color: brown;
+}
+
+.registerbtn {
+  background-color: #af2c22;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 40vw;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
 }

@@ -25,8 +25,8 @@ export class OrderComponent implements OnInit {
   clientDetails = new FormGroup({
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
-    phoneNumber: new FormControl('', Validators.required),
-    eMail: new FormControl(''),
+    phoneNumber: new FormControl('', [Validators.required, Validators.minLength(9)]),
+    eMail: new FormControl('', Validators.email),
     city: new FormControl('', Validators.required),
     street: new FormControl('', Validators.required),
     buildingNumber: new FormControl('', Validators.required),

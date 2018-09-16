@@ -1,36 +1,36 @@
-<div class="menu" *ngIf="order">
+<div class="menu">
+  <div *ngIf="order">
+    <table class="tg">
+      <tr>
+        <th>Numer pozycji</th>
+        <th>Nazwa</th>
+        <th>Typ</th>
+        <th>Ilość</th>
+        <th>Cena</th>
+      </tr>
 
-  <table>
-    <tr>
-      <th>Numer pozycji</th>
-      <th>Nazwa</th>
-      <th>Typ</th>
-      <th>Ilosc</th>
-      <th>Cena</th>
-    </tr>
+      <tr *ngFor="let position of order.dishIds">
+        <td>{{position.dishId}}</td>
+        <td>{{findDishById(position.dishId).name}}</td>
+        <td>{{findDishById(position.dishId).type}}</td>
+        <td>{{position.quantity}}</td>
+        <td>{{findDishById(position.dishId).price * position.quantity}}</td>
+      </tr>
 
-    <tr *ngFor="let position of order.dishIds">
-      <td>{{position.dishId}}</td>
-      <td>{{findDishById(position.dishId).name}}</td>
-      <td>{{findDishById(position.dishId).type}}</td>
-      <td>{{position.quantity}}</td>
-      <td>{{findDishById(position.dishId).price * position.quantity}}</td>
-    </tr>
-
-  </table>
-  <br>
-  <div>
-    <div>Cena zamowienia: {{order.totalCost}}</div>
+    </table>
     <br>
-    <div>Status zamowienia: {{order.status}}</div>
-  </div>
+    <div>
+      <div class="info">Cena zamówienia: {{order.totalCost}} zł</div>
+      <br>
+      <div class="info">Status zamówienia: {{order.status}}</div>
+    </div>
 
-  <div>
-    <button (click)="changeStatusOfOrderToDelivered()">Dostarczono</button>
-    <button (click)="changeStatusOfOrderToInTransit()">W trakcie dowozu</button>
-    <button (click)="changeStatusOfOrderToAccepted()">Przyjeto do realizacji</button>
-  </div>
+    <div class="buttons">
+      <button class="button" (click)="changeStatusOfOrderToDelivered()">Dostarczono</button>
+      <button class="button" (click)="changeStatusOfOrderToInTransit()">W trakcie dowozu</button>
+      <button class="button" (click)="changeStatusOfOrderToAccepted()">Przyjeto do realizacji</button>
+    </div>
 
+  </div>
 </div>
-
-<a routerLink="/admin-panel/dashboard-orders-list">Powrot</a>
+<button class="returnButton" routerLink="/admin-panel/dashboard-orders-list">Powrót</button>

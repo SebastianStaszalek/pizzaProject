@@ -53,8 +53,8 @@ export class AppModule {
 
 // TODO: modyfikatory dostepu!
 // TODO: sprawdz OnDestroy takeUntil
-// TODO: zablokuj przycisk w formularzu zanim pola beda wypelnione
 // TODO: zamien wszystko na stronie na jezyk polski!
 // TODO: wstaw odpowiednie zdjecia
 // TODO: znajdz jakies logo
 // TODO: subskrypcje!
+// TODO: zablokuj lub schowaj przycisk zamowienie w widoku order
