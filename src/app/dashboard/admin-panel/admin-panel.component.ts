@@ -8,6 +8,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class AdminPanelComponent implements OnInit {
 
+  active: string;
+
   constructor(
     readonly router: Router,
     readonly route: ActivatedRoute
@@ -18,10 +20,12 @@ export class AdminPanelComponent implements OnInit {
   }
 
   showDishesList() {
+    this.active = 'dishes';
     this.router.navigate(['dashboard-dishes-list'], {relativeTo: this.route});
   }
 
   showOrdersList() {
+    this.active = 'orders';
     this.router.navigate(['dashboard-orders-list'], {relativeTo: this.route});
   }
 

@@ -7,4 +7,5 @@ export interface Dish {
   description: string;
   type: DishType;
   price: number;
+  imageSource: string;
 }

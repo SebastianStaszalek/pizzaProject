@@ -1,9 +1,9 @@
 <section class="menu">
-  <div class="button-menu">
-    <button (click)="showDishesList()">Lista dań</button>
+  <div>
+    <button (click)="showDishesList()" [ngClass]="{'button-active' : active==='dishes'}">Lista dań</button>
   </div>
-  <div class="button-menu">
-    <button (click)="showOrdersList()">Lista zamówień</button>
+  <div>
+    <button (click)="showOrdersList()" [ngClass]="{'button-active' : active==='orders'}">Lista zamówień</button>
   </div>
 </section>
 <div class="list">

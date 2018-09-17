@@ -6,15 +6,17 @@
       "isAvailable": true,
       "description": "Sos, ser",
       "type": "pizza",
-      "price": "22"
+      "price": "22",
+      "imageSource": "src/assets/images/pizza-salami.png"
     },
     {
       "id": 2,
-      "name": "Pizza Funghi",
+      "name": "Pizza Speciale",
       "isAvailable": true,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
-      "price": "23.50"
+      "price": "23.50",
+      "imageSource": "src/assets/images/pizza-gora-4.png"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "isAvailable": true,
       "description": "Sos, ser, salami piccante",
       "type": "pizza",
-      "price": "25"
+      "price": "25",
+      "imageSource": "src/assets/images/pizza-salami.png"
     },
     {
       "id": 4,
@@ -30,15 +33,17 @@
       "isAvailable": true,
       "description": "Sos boloński",
       "type": "makaron",
-      "price": "14"
+      "price": "14",
+      "imageSource": "src/assets/images/spaghetti-0-male.png"
     },
     {
       "id": 5,
-      "name": "Spagetti Siciliana",
+      "name": "Tagliattele porccini",
       "isAvailable": true,
-      "description": "Sos boloński z szynką i kukurydzą",
+      "description": "Kurczak, szpinak, grzyby",
       "type": "makaron",
-      "price": "17.50"
+      "price": "17.50",
+      "imageSource": "src/assets/images/IMG_4346-male.png"
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "isAvailable": true,
       "description": "",
       "type": "napój",
-      "price": "5.50"
+      "price": "5.50",
+      "imageSource": "src/assets/images/cola.png"
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "isAvailable": true,
       "description": "woda delikatnie musujaca",
       "type": "napój",
-      "price": "7.50"
+      "price": "7.50",
+      "imageSource": "src/assets/images/cisowianka.png"
     },
     {
       "id": 8,
@@ -62,7 +69,17 @@
       "isAvailable": false,
       "description": "Sos, ser, prosciutto, rukola",
       "type": "pizza",
-      "price": "26"
+      "price": "26",
+      "imageSource": "src/assets/images/pizza-cukinia-2.png"
+    },
+    {
+      "id": 9,
+      "name": "Spaghetti Siciliana",
+      "isAvailable": true,
+      "description": "Sos pomidorowy, pomidorki, kurczak",
+      "type": "makaron",
+      "price": "21",
+      "imageSource": "src/assets/images/makarongora.png"
     }
   ],
   "orders": [

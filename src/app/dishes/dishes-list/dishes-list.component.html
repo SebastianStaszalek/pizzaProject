@@ -16,7 +16,7 @@
   <app-order-basket></app-order-basket>
   <ul class="dishes">
     <li *ngFor="let dish of dishes">
-      <img src="https://michalwrzosek.pl/wp-content/uploads/2018/01/pizza-gora-5.png">
+      <img src="{{dish.imageSource}}">
       <span class="badge">{{dish.name}}</span>
       <span>{{dish.description}}</span>
       <span>{{dish.price}}</span>

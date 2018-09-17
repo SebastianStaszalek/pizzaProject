@@ -19,13 +19,17 @@
 }
 
 button {
-  background-color: #af2c22;
+  background-color: #555555;
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   width: 25vw;
+}
+
+button.button-active {
+  background-color: #af2c22;
 }
 
 .list {
