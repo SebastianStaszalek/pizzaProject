@@ -35,8 +35,8 @@ export class OrderComponent implements OnInit, OnDestroy {
   });
 
   constructor(
-    readonly orderService: OrderService,
-    readonly basketService: OrderBasketService,
+    private readonly orderService: OrderService,
+    private readonly basketService: OrderBasketService,
     private router: Router
   ) {
     this.order = <Order>{};

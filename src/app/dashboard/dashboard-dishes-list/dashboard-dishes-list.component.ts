@@ -17,7 +17,7 @@ export class DashboardDishesListComponent implements OnInit, OnDestroy {
   private readonly destroy$ = new Subject();
 
   constructor(
-    readonly dashboardDishesService: DashboardDishesService
+    private readonly dashboardDishesService: DashboardDishesService
   ) {
   }
 

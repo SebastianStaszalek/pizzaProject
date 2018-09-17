@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import {ActivatedRoute, Router} from '@angular/router';
   templateUrl: './admin-panel.component.html',
   styleUrls: ['./admin-panel.component.scss']
 })
-export class AdminPanelComponent implements OnInit {
+export class AdminPanelComponent {
 
   active: string;
 
@@ -14,9 +14,6 @@ export class AdminPanelComponent implements OnInit {
     readonly router: Router,
     readonly route: ActivatedRoute
   ) {
-  }
-
-  ngOnInit() {
   }
 
   showDishesList() {

@@ -18,8 +18,8 @@ export class DishesListComponent implements OnInit, OnDestroy {
   private readonly destroy$ = new Subject();
 
   constructor(
-    readonly service: DishesService,
-    readonly orderService: OrderBasketService
+    private readonly service: DishesService,
+    private readonly orderService: OrderBasketService
   ) {
   }
 

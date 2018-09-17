@@ -16,7 +16,7 @@ export class DashboardOrdersListComponent implements OnInit, OnDestroy {
   private readonly destroy$ = new Subject();
 
   constructor(
-    readonly dashboardOrdersService: DashboardOrdersService
+    private readonly dashboardOrdersService: DashboardOrdersService
   ) {
   }
 
