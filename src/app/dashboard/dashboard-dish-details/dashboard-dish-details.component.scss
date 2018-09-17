@@ -1,12 +1,71 @@
-.menu{
+.menu {
   background: lightgrey;
-  border: thin black;
   border-top: 20px;
   width: 65vw;
-  height: 70vh;
+  height: 60vh;
   border-radius: 30px;
-  display:  flex;
-  margin: 10px;
+  display: flex;
   top: 100px;
   right: 0;
+  justify-content: center;
+  margin-left: 15vw;
+  margin-top: 50px;
+}
+
+table {
+
+}
+
+.tg td {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 10px 5px;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.tg th {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 10px 5px;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top
+}
+
+img {
+  height: 300px;
+  width: 300px;
+}
+
+.tg-buttons {
+  display: flex;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  padding-bottom: 20px;
+}
+
+button {
+  background-color: #af2c22;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.button-back {
+  margin-left: 45vw;
+  margin-top: 15px;
 }

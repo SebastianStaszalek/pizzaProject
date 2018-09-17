@@ -10,11 +10,11 @@
     <form [formGroup]="clientDetails">
       <div>
         <div>
-          <label>Imie:
+          <label>Imię:
             <input type="text" formControlName="firstName">
           </label> <br>
           <span *ngIf="clientDetails.controls['firstName'].touched">
-            wpisz imie!
+            wpisz imię!
           </span>
           <label>Nazwisko:
             <input type="text" formControlName="lastName">
@@ -45,7 +45,7 @@
           </label>
         </div>
       </div>
-      <button class="registerbtn" [disabled]="!clientDetails.valid" (click)="addOrder()">Zatwierdz</button>
+      <button class="registerbtn" [disabled]="!clientDetails.valid" (click)="addOrder()">Zatwierdź</button>
     </form>
   </div>
 </div>

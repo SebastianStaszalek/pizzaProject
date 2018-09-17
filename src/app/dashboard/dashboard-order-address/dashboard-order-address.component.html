@@ -1,8 +1,31 @@
 <div class="menu">
-  <p>Ulica: {{order.street}}</p>
-  <p>Miasto: {{order.city}}</p>
-  <p>Numer budynku: {{order.buildingNumber}}</p>
-  <p>Numer mieszkania: {{order.apartmentNumber}}</p>
-  <p>Numer kontaktowy: {{order.phoneNumber}}</p>
+  <div *ngIf="order">
+    <table class="tg">
+      <tr>
+        <td class="tg-name">Ulica</td>
+        <td class="tg-data">{{order.street}}</td>
+      </tr>
+      <tr>
+        <td class="tg-name">Numer budynku</td>
+        <td class="tg-data">{{order.buildingNumber}}</td>
+      </tr>
+      <tr>
+        <td class="tg-name">Numer mieszkania</td>
+        <td class="tg-data">{{order.apartmentNumber}}</td>
+      </tr>
+      <tr>
+        <td class="tg-name">Miasto</td>
+        <td class="tg-data">{{order.city}}</td>
+      </tr>
+      <tr>
+        <td class="tg-name">Telefon</td>
+        <td class="tg-data">{{order.phoneNumber}}</td>
+      </tr>
+      <tr>
+        <td class="tg-name">Zamawiający</td>
+        <td class="tg-data">{{order.firstName}} {{order.lastName}}</td>
+      </tr>
+    </table>
+  </div>
 </div>
-<a routerLink="/admin-panel/dashboard-orders-list">Powrot</a>
+<button class="button" routerLink="/admin-panel/dashboard-orders-list">Powrót</button>

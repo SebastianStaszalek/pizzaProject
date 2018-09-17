@@ -6,8 +6,8 @@
       <th>Numer pozycji</th>
       <th>Nazwa</th>
       <th>Typ</th>
-      <th>Dostepnosc</th>
-      <th>Podglad</th>
+      <th>Dostepność</th>
+      <th>Podgląd</th>
     </tr>
 
     <tr *ngFor="let dish of dishes">
@@ -16,7 +16,7 @@
       <td>{{dish.type}}</td>
       <td class="check"><input type="checkbox" (click)="changeAvailability(dish)" [checked]="dish.isAvailable"></td>
       <td>
-        <button class="button" routerLink="/dashboard-dish-details/{{dish.id}}">Podglad</button>
+        <button class="button" routerLink="/dashboard-dish-details/{{dish.id}}">Podgląd</button>
       </td>
     </tr>
 

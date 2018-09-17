@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Pizza Margherita",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Sos, ser",
       "type": "pizza",
       "price": "22"

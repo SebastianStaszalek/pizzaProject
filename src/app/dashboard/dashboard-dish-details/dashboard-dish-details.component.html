@@ -1,11 +1,34 @@
-<div>
-  <ul class="menu">
-      <li>Numer pozycji: {{dish.id}}</li>
-      <li>Nazwa: {{dish.name}}</li>
-      <li>Skladniki: {{dish.description}}</li>
-      <li>Cena: {{dish.price}}</li>
-      <li>Typ: {{dish.type}}</li>
-      <li>Dostepnosc: {{dish.isAvailable}}</li>
-  </ul>
+
+<div class="menu">
+  <table *ngIf="dish" class="tg">
+    <colgroup>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <tr>
+      <td class="tg-picture" rowspan="2"><img
+        src="https://michalwrzosek.pl/wp-content/uploads/2018/01/pizza-gora-5.png"></td>
+      <td class="tg-info">
+        <ul>
+          <li>{{dish.id}}. {{dish.name}}</li>
+          <li>{{dish.description}}</li>
+        </ul>
+      </td>
+      <td class="tg-price">
+        <ul>
+          <li>Cena: {{dish.price}} zł</li>
+          <li>Dostępność: <input type="checkbox"  [checked]="dish.isAvailable"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="tg-buttons" colspan="2">
+        <button>Usuń</button>
+        <button (click)="changeAvailability(dish)">Zmień dostępność</button>
+      </td>
+    </tr>
+  </table>
 </div>
-<a routerLink="/admin-panel/dashboard-dishes-list">Powrot</a>
+
+<button class="button-back" routerLink="/admin-panel/dashboard-dishes-list">Powrót</button>

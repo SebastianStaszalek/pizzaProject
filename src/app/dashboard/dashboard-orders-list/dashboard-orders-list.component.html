@@ -1,13 +1,12 @@
-<h2>Lista zamowien</h2>
+<h2>Lista zamówień</h2>
 
 <section class="menu">
-
   <table class="tg">
     <tr>
-      <th class="tg">Numer pozycji</th>
+      <th class="tg">Numer zamówienia</th>
       <th>Ulica</th>
       <th>Status</th>
-      <th>Data przyjecia</th>
+      <th>Data przyjęcia</th>
       <th></th>
       <th></th>
     </tr>
@@ -18,14 +17,12 @@
       <td>{{order.status}}</td>
       <td>{{order.date}}</td>
       <td>
-        <button class="button" routerLink="/dashboard-order-details/{{order.id}}">Podglad</button>
+        <button class="button" routerLink="/dashboard-order-details/{{order.id}}">Podgląd</button>
       </td>
       <td>
         <button class="button" routerLink="/dashboard-order-address/{{order.id}}">Adres</button>
       </td>
     </tr>
-
   </table>
-
 </section>
-<a routerLink="/admin-panel">Powrot</a>
+
