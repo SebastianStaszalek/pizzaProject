@@ -1,19 +1,16 @@
+body {
+text-align: center;
+}
+
 .menu {
   background: lightgrey;
-  border-top: 20px;
   width: 65vw;
   height: 60vh;
   border-radius: 30px;
   display: flex;
-  top: 100px;
   right: 0;
   justify-content: center;
-  margin-left: 15vw;
-  margin-top: 50px;
-}
-
-table {
-
+  margin: 50px auto;
 }
 
 .tg td {
@@ -63,6 +60,7 @@ button {
   text-align: center;
   text-decoration: none;
   font-size: 10px;
+  margin-right: 10px;
 }
 
 .button-back {

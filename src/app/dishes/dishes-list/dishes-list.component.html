@@ -2,13 +2,13 @@
 <section class="menu">
   <div>
     <div>
-    <button class="button-menu" (click)="getPizza()">Pizza</button>
+    <button class="button-dis" (click)="getPizza()" [ngClass]="{'button-active' : active==='pizza'}">Pizza</button>
   </div>
     <div>
-      <button class="button-menu" (click)="getPasta()">Makarony</button>
+      <button class="button-dis" (click)="getPasta()" [ngClass]="{'button-active' : active==='pasta'}">Makarony</button>
     </div>
     <div>
-      <button class="button-menu" (click)="getBeverage()">Napoje</button>
+      <button class="button-dis" (click)="getBeverage()" [ngClass]="{'button-active' : active==='beverage'}">Napoje</button>
     </div>
   </div>
 

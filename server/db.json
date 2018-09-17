@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Pizza Margherita",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos, ser",
       "type": "pizza",
       "price": "22"
@@ -22,14 +22,14 @@
       "isAvailable": true,
       "description": "Sos, ser, salami piccante",
       "type": "pizza",
-      "price": "13.90"
+      "price": "25"
     },
     {
       "id": 4,
       "name": "Spagetti Bolognese",
       "isAvailable": true,
       "description": "Sos boloński",
-      "type": "pasta",
+      "type": "makaron",
       "price": "14"
     },
     {
@@ -37,7 +37,7 @@
       "name": "Spagetti Siciliana",
       "isAvailable": true,
       "description": "Sos boloński z szynką i kukurydzą",
-      "type": "pasta",
+      "type": "makaron",
       "price": "17.50"
     },
     {
@@ -45,16 +45,16 @@
       "name": "Coca-cola",
       "isAvailable": true,
       "description": "",
-      "type": "beverage",
-      "price": "17.50"
+      "type": "napój",
+      "price": "5.50"
     },
     {
       "id": 7,
       "name": "Cisowianka Perlage",
       "isAvailable": true,
       "description": "woda delikatnie musujaca",
-      "type": "beverage",
-      "price": "17.50"
+      "type": "napój",
+      "price": "7.50"
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "isAvailable": false,
       "description": "Sos, ser, prosciutto, rukola",
       "type": "pizza",
-      "price": "13.90"
+      "price": "26"
     }
   ],
   "orders": [
@@ -89,18 +89,19 @@
           "quantity": 1
         }
       ],
-      "status": "Zaakceptowany",
-      "date": "2018-09-12T12:47:26.850Z",
+      "status": "Dostarczone",
+      "date": "2018-09-16 16:00",
+      "totalCost": 135,
       "id": 1
     },
     {
-      "firstName": "seba",
-      "lastName": "",
-      "phoneNumber": "",
-      "eMail": "",
-      "city": "",
-      "street": "",
-      "buildingNumber": "",
+      "firstName": "sebastian",
+      "lastName": "jarecki",
+      "phoneNumber": "600245002",
+      "eMail": "seb@wp.pl",
+      "city": "Poznań",
+      "street": "Jeżycka",
+      "buildingNumber": "23C",
       "apartmentNumber": "",
       "dishIds": [
         {
@@ -113,39 +114,33 @@
         }
       ],
       "status": "W trakcie dowozu",
-      "date": "2018-09-13T10:01:36.045Z",
+      "date": "2018-09-16 10:32",
       "totalCost": 67.5,
       "id": 2
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "phoneNumber": "",
-      "eMail": "",
-      "city": "",
-      "street": "",
-      "buildingNumber": "",
-      "apartmentNumber": "",
-      "dishIds": [],
-      "status": "Zaakceptowany",
-      "date": "2018-09-16 11:57",
-      "totalCost": 0,
+      "firstName": "Czarek",
+      "lastName": "Głodny",
+      "phoneNumber": 500200453,
+      "eMail": "cezary90@onet.pl",
+      "city": "Śrem",
+      "street": "Główna",
+      "buildingNumber": "10",
+      "apartmentNumber": "32",
+      "dishIds": [
+        {
+          "dishId": 2,
+          "quantity": 2
+        },
+        {
+          "dishId": 3,
+          "quantity": 3
+        }
+      ],
+      "status": "Przyjęto do realizacji",
+      "date": "2018-09-17 14:26",
+      "totalCost": 122,
       "id": 3
-    },
-    {
-      "firstName": "artur",
-      "lastName": "palka",
-      "phoneNumber": 600000000,
-      "eMail": "abc@wp.pl",
-      "city": "poznan",
-      "street": "forteczna",
-      "buildingNumber": "12",
-      "apartmentNumber": "56",
-      "dishIds": [],
-      "status": "Zaakceptowany",
-      "date": "2018-09-16 11:59",
-      "totalCost": 0,
-      "id": 4
     }
   ],
   "users": [

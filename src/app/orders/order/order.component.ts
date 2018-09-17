@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Subscription} from 'rxjs';
+import {Subject} from 'rxjs';
 import {Order} from '../../model/order.model';
 import {OrderService} from '../order.service';
 import {OrderBasketService} from '../order-basket.service';
@@ -15,12 +15,13 @@ import * as moment from 'moment';
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.scss']
 })
-export class OrderComponent implements OnInit {
+export class OrderComponent implements OnInit, OnDestroy {
 
-  sub: Subscription;
   order: Order;
   dishIds: OrderQuantity[] = [];
   basketPositions: BasketDish[];
+
+  private readonly destroy$ = new Subject();
 
   clientDetails = new FormGroup({
     firstName: new FormControl('', Validators.required),
@@ -41,10 +42,6 @@ export class OrderComponent implements OnInit {
     this.order = <Order>{};
   }
 
-  onSubmit() {
-    console.log(this.clientDetails.value);
-  }
-
   ngOnInit(): void {
     this.getDishes();
   }
@@ -56,8 +53,12 @@ export class OrderComponent implements OnInit {
     this.order.date = moment().format('YYYY-MM-DD HH:mm');
     this.order.totalCost = this.basketService.getBasketCost();
 
-    this.orderService.addOrder(this.order).subscribe();
-    this.router.navigate(['/order-info']);
+    this.orderService.addOrder(this.order).subscribe(() => {
+      this.basketService.clearBasket();
+      this.router.navigate(['/order-info']);
+    });
+
+
   }
 
   getDishes(): void {
@@ -69,6 +70,11 @@ export class OrderComponent implements OnInit {
       position.quantity = dish.counter;
       this.dishIds.push(position);
     }
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
 }

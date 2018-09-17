@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Dish} from '../../model/dish.model';
 import {OrderBasketService} from '../order-basket.service';
 
@@ -15,5 +15,6 @@ export class OrderBasketComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

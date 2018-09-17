@@ -1,7 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DashboardDishesService} from '../dashboard-dishes.service';
 import {Dish} from '../../model/dish.model';
-import {Subscription} from 'rxjs';
+import {Subject, Subscription} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard-dishes-list',
@@ -13,6 +14,8 @@ export class DashboardDishesListComponent implements OnInit, OnDestroy {
   dishes: Dish[];
   sub: Subscription;
 
+  private readonly destroy$ = new Subject();
+
   constructor(
     readonly dashboardDishesService: DashboardDishesService
   ) {
@@ -23,17 +26,18 @@ export class DashboardDishesListComponent implements OnInit, OnDestroy {
   }
 
   getDishes(): void {
-    this.sub = this.dashboardDishesService.getDishes()
+    this.sub = this.dashboardDishesService.getDishes().pipe(takeUntil(this.destroy$))
       .subscribe(dishes => this.dishes = dishes);
   }
 
   changeAvailability(dish: Dish): void {
     dish.isAvailable = !dish.isAvailable;
-    this.sub = this.dashboardDishesService.update(dish).subscribe();
+    this.dashboardDishesService.update(dish).pipe(takeUntil(this.destroy$)).subscribe();
   }
 
   ngOnDestroy(): void {
-    this.sub.unsubscribe();
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
 }

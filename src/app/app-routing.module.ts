@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'order-info', component: OrderInfoComponent},
   { path: 'dashboard-dish-details/:id', component: DashboardDishDetailsComponent, canActivate: [LoginGuard]},
   { path: 'dashboard-order-details/:id', component: DashboardOrderDetailsComponent, canActivate: [LoginGuard]},
-  { path: 'dashboard-order-address/:id', component: DashboardOrderAddressComponent, canActivate: [LoginGuard] }
+  { path: 'dashboard-order-address/:id', component: DashboardOrderAddressComponent, canActivate: [LoginGuard]}
 ];
 
 @NgModule({

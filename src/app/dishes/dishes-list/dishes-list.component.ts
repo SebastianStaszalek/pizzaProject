@@ -1,9 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DishesService} from '../dishes.service';
 import {Dish} from '../../model/dish.model';
-import {Subscription} from 'rxjs';
+import {Subject} from 'rxjs';
 import {OrderBasketService} from '../../orders/order-basket.service';
 import {BasketDish} from '../../model/basket-dish.model';
+import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'app-dishes-list',
@@ -12,12 +13,15 @@ import {BasketDish} from '../../model/basket-dish.model';
 })
 export class DishesListComponent implements OnInit, OnDestroy {
   dishes: Dish[];
-  sub: Subscription;
+  active: string;
+
+  private readonly destroy$ = new Subject();
 
   constructor(
     readonly service: DishesService,
     readonly orderService: OrderBasketService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     this.getPizza();
@@ -28,22 +32,30 @@ export class DishesListComponent implements OnInit, OnDestroy {
   }
 
   getPizza(): void {
-    this.sub = this.service.getPizza()
+    this.active = 'pizza';
+    this.service.getPizza().pipe(takeUntil(this.destroy$))
       .subscribe(pizza => this.dishes = pizza);
   }
 
   getPasta(): void {
-    this.sub = this.service.getPasta()
+    this.active = 'pasta';
+    this.service.getPasta().pipe(takeUntil(this.destroy$))
       .subscribe(pasta => this.dishes = pasta);
   }
 
   getBeverage(): void {
-    this.sub = this.service.getBeverage()
+    this.active = 'beverage';
+    this.service.getBeverage().pipe(takeUntil(this.destroy$))
       .subscribe(beverage => this.dishes = beverage);
   }
 
+  changeColorOfButton(): void {
+
+  }
+
   ngOnDestroy(): void {
-    this.sub.unsubscribe();
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
 }

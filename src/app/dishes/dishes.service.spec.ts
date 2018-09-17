@@ -80,15 +80,13 @@ fdescribe('DishesService', () => {
     httpTestingController.verify();
   }));
 
-  //TODO: nie przechodzi??!!
   it('should call HttpClient.get when getPizza and find Dish by id', inject([DishesService], (service: DishesService) => {
-    const testData: Dish[] = [<Dish>{ id: 1}, <Dish>{ id: 2}];
-    const expectedData: Dish = <Dish>{ id: 1};
-    const id = expectedData.id;
+    const testData: Dish = <Dish>{ id: 1};
+    const id = 1;
     const findByIdUrl = `/api/dishes/${id}`;
 
     dishesService.getDish(id).subscribe(
-      dishes => expect(dishes).toEqual(expectedData, 'should return expected pizzas'),
+      dishes => expect(dishes).toEqual(testData, 'should return expected pizzas'),
       fail
     );
 

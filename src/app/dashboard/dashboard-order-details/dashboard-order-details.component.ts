@@ -4,7 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {DashboardOrdersService} from '../dashboard-orders.service';
 import {Dish} from '../../model/dish.model';
 import {takeUntil} from 'rxjs/operators';
-import {Subject, Subscription} from 'rxjs';
+import {Subject} from 'rxjs';
 import {DashboardDishesService} from '../dashboard-dishes.service';
 import {OrderStatus} from '../../model/enum/order-status.enum';
 
@@ -17,7 +17,6 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
 
   order: Order;
   dishes: Dish[] = [];
-  sub: Subscription;
 
   private readonly destroy$ = new Subject();
 
@@ -35,7 +34,7 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
 
   getOrder(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.dashboardOrdersService.getOrder(id)
+    this.dashboardOrdersService.getOrder(id).pipe(takeUntil(this.destroy$))
       .subscribe(order => {
         this.order = order;
         this.getDishes();
@@ -58,17 +57,17 @@ export class DashboardOrderDetailsComponent implements OnInit, OnDestroy {
 
   changeStatusOfOrderToDelivered(): void {
     this.order.status = OrderStatus.Delivered;
-    this.sub = this.dashboardOrdersService.update(this.order).subscribe();
+    this.dashboardOrdersService.update(this.order).pipe(takeUntil(this.destroy$)).subscribe();
   }
 
   changeStatusOfOrderToInTransit(): void {
     this.order.status = OrderStatus.InTransit;
-    this.sub = this.dashboardOrdersService.update(this.order).subscribe();
+    this.dashboardOrdersService.update(this.order).pipe(takeUntil(this.destroy$)).subscribe();
   }
 
   changeStatusOfOrderToAccepted(): void {
     this.order.status = OrderStatus.Accepted;
-    this.sub = this.dashboardOrdersService.update(this.order).subscribe();
+    this.dashboardOrdersService.update(this.order).pipe(takeUntil(this.destroy$)).subscribe();
   }
 
   ngOnDestroy(): void {

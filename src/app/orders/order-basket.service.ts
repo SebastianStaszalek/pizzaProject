@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Dish} from '../model/dish.model';
 import {BasketDish} from '../model/basket-dish.model';
 
 @Injectable({
@@ -8,7 +7,6 @@ import {BasketDish} from '../model/basket-dish.model';
 export class OrderBasketService {
 
   basketPositions: BasketDish[] = [];
-  index: number;
   basketCost: number;
 
   constructor() {
@@ -31,7 +29,7 @@ export class OrderBasketService {
     if (index !== -1 && dish.counter > 1) {
       dish.counter--;
     } else {
-      this.basketPositions.splice(this.index, 1);
+      this.basketPositions.splice(index, 1);
     }
     this.calculateBasketCost();
   }
@@ -49,6 +47,11 @@ export class OrderBasketService {
 
   getBasketCost(): number {
     return Math.round(this.basketCost * 100) / 100;
+  }
+
+  clearBasket(): void {
+    this.basketPositions = [];
+    this.basketCost = 0;
   }
 
 }

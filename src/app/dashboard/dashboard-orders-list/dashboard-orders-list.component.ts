@@ -1,7 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Order} from '../../model/order.model';
-import {Subscription} from 'rxjs';
+import {Subject} from 'rxjs';
 import {DashboardOrdersService} from '../dashboard-orders.service';
+import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard-orders-list',
@@ -11,7 +12,8 @@ import {DashboardOrdersService} from '../dashboard-orders.service';
 export class DashboardOrdersListComponent implements OnInit, OnDestroy {
 
   orders: Order[];
-  sub: Subscription;
+
+  private readonly destroy$ = new Subject();
 
   constructor(
     readonly dashboardOrdersService: DashboardOrdersService
@@ -23,12 +25,13 @@ export class DashboardOrdersListComponent implements OnInit, OnDestroy {
   }
 
   getOrders(): void {
-    this.sub = this.dashboardOrdersService.getOrders()
+    this.dashboardOrdersService.getOrders().pipe(takeUntil(this.destroy$))
       .subscribe(orders => this.orders = orders);
   }
 
   ngOnDestroy(): void {
-    this.sub.unsubscribe();
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
 }

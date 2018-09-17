@@ -23,12 +23,12 @@ export class DishesService {
   }
 
   getPasta(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes/?type=pasta')
+    return this.http.get<Dish[]>('/api/dishes/?type=makaron')
       .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
 
   getBeverage(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes/?type=beverage')
+    return this.http.get<Dish[]>('/api/dishes/?type=napój')
       .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
 

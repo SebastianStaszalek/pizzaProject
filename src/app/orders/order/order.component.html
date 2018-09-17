@@ -12,18 +12,24 @@
         <div>
           <label>Imię:
             <input type="text" formControlName="firstName">
-          </label> <br>
-          <span *ngIf="clientDetails.controls['firstName'].touched">
+          </label>
+          <span *ngIf="clientDetails.controls['firstName'].errors && clientDetails.controls['firstName'].touched">
             wpisz imię!
           </span>
           <label>Nazwisko:
             <input type="text" formControlName="lastName">
           </label>
+          <span *ngIf="clientDetails.controls['lastName'].errors && clientDetails.controls['lastName'].touched">
+            wpisz nazwisko!
+          </span>
         </div>
         <div>
           <label>Numer telefonu:
-            <input type="number" formControlName="phoneNumber">
+            <input type="tel" formControlName="phoneNumber">
           </label>
+          <span *ngIf="clientDetails.controls['phoneNumber'].errors && clientDetails.controls['phoneNumber'].touched">
+            a jak do Ciebie zadzwonimy?
+          </span>
           <label>E-mail:
             <input type="email" formControlName="eMail">
           </label>
@@ -32,20 +38,29 @@
           <label>Miasto
             <input type="text" formControlName="city">
           </label>
+          <span *ngIf="clientDetails.controls['city'].errors && clientDetails.controls['city'].touched">
+            a gdzie Mamy to zawieźć?!
+          </span>
           <label>Ulica:
             <input type="text" formControlName="street">
           </label>
+          <span *ngIf="clientDetails.controls['street'].errors && clientDetails.controls['street'].touched">
+            ulica też by się przydała!
+          </span>
         </div>
         <div>
           <label>Numer domu:
             <input type="text" formControlName="buildingNumber">
           </label>
+          <span *ngIf="clientDetails.controls['buildingNumber'].errors && clientDetails.controls['buildingNumber'].touched">
+            chyba nie chcesz żeby Twój sąsiad dostał darmową pizzę?
+          </span>
           <label>Numer mieszkania:
             <input type="text" formControlName="apartmentNumber">
           </label>
         </div>
       </div>
-      <button class="registerbtn" [disabled]="!clientDetails.valid" (click)="addOrder()">Zatwierdź</button>
+      <button class="registerbtn" [disabled]="!clientDetails.valid || order.totalCost<=0" (click)="addOrder()">Zatwierdź</button>
     </form>
   </div>
 </div>

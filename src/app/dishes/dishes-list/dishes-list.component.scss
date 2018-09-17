@@ -81,8 +81,12 @@ button.button{
   vertical-align: center;
 }
 
-.button-menu{
+.button-active.button-dis{
   background-color: #af2c22;
+}
+
+.button-dis{
+  background-color: #555555;
   border: none;
   color: white;
   text-align: center;
